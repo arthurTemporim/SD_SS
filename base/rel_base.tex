@@ -1,0 +1,223 @@
+%Centralizar verticalmente.
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+%Centralizar horizontalmente.
+\newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
+\documentclass[12pts]{article}
+\usepackage[utf8]{inputenc} 
+\title{
+	Sistemas Digitais (167983)
+	\singlespace
+	Turma FF
+	\singlespacing
+	\begin{midpage}
+	\begin {large}
+		Relatório Experimento X
+		\singlespace
+		Título
+	\end {large}
+	\end{midpage}
+}
+\date{Abril 11, 2016}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle	
+%\vspace{100 mm}
+\begin{center}
+
+\begin{tabular}{|c|l|r|}
+\hline
+Nome & Matrícula & Assinatura\\
+\hline
+Arthur Temporim & 140016759 & \\
+\hline	
+Eduardo Nunes & 140056189 & \\
+\hline	
+\end{tabular}
+
+\end{center}
+
+
+\newpage
+
+\section{Sumário}
+
+\begin{itemize}
+\item Introdução
+\item Objetivos
+\item Materiais Utilizados
+\item Procedimentos
+\subitem Montagem do 1º Circuito
+\subsubitem Tabela verdade
+\subsubitem Ordem de montagem do circuito
+\subitem Montagem do 2º Circuito
+\subsubitem Tabela verdade
+\subsubitem Ordem de montagem do circuito
+\item Discussão
+\subitem Caracterização de CIs
+\item Conclusões 
+\item Referências Bibliograficas
+\item Tabelas de conexão
+\item Diagramas esquemáticos
+\end{itemize}
+
+\newpage
+
+
+\section{Introdução}
+
+\singlespacing
+\section{Objetivos}
+
+\section{Materiais Utilizados}
+
+
+\begin{tabular}{|c|r|}
+\hline
+Material Utilizado & Quantidade\\
+\hline
+Cabo Banana-Banana & 2  \\
+\hline
+Fios de cobre & x \\
+\hline
+Cabo coaxial & 3  \\
+\hline
+CI 74HC00   & 1 \\
+\hline
+CI 74LS00   & 1 \\
+\hline
+Protoboard & 2 \\
+\hline
+Fonte de tensão MPL-3305M & 1 \\
+\hline	
+Multímetro Digital  & 1 \\
+\hline
+Gerador de funçoes iCEL modelo GV-2002 & 1 \\
+\hline
+Osciloscopio BK 2530 & 1 \\
+\hline
+\end{tabular}
+\singlespacing
+
+\section{Procedimentos}
+
+\subsection{Montagem do 1º Circuito}
+
+\subsubsection{Tabela verdade}
+\iffalse
+\begin{center}
+	\begin{tabular}{|c|l|r|r|}
+		\hline
+		A&S\\
+		\hline
+		L&H\\
+		\hline
+		H&L\\
+		\hline
+	\end{tabular}
+\end{center}
+\fi
+\subsubsection{Ordem de montagem do circuito}
+\iffalse
+\begin{itemize}
+\item Primeiramente a fonte de alimentação foi escolhida e foi fixada o mesmo GND para as duas 
+saidas.
+\item A protoboard foi alimentada.
+\item CI NAND (74LS00) foi posicionado e alimentado.
+\item Os pinos 1 e 2 do CI foram ligados e a fonte de alimentação variável foi conectada no
+primeiro pino.
+\item O pino 3 (saida da porta NAND) foi conectado ao multímetro digital de forma a verificar
+os valores de saída da porta lógica.
+\item Foi aumentado o valor da fonte variável de na escala de  0,5V.
+\item Os valores de saída foram anotados.
+\item O CI NAND (74LS00), da familia TTL foi substituido pelo CI NAND (74HC00),
+da familia CMOS, para fazer novas anotaçoes.
+\item O circuito eletrônico teve comportamento de acordo com o desejado.
+\end{itemize}
+\fi
+
+\subsection{Montagem do 2º Circuito (setup para tempos)}
+
+\subsubsection{Tabela verdade}
+
+\subsubsection{Ordem de montagem do circuito}
+
+\section{Discussão}
+
+\subsection{Circuito 1}
+
+\subsection{Circuito 2}
+
+\section{Conclusões}
+
+\section{Referências Bibliográficas}
+
+Laboratório de Sistemas Digitais I 2015.1 professores Fabiano Soares, 
+José Felício Marcus Chaffim Renato Lopes UnB - FGA Março de 2015.
+
+\section{Tabelas de Conexão}
+
+%Exemplo de tabela:
+\iffalse
+\singlespacing
+\begin{tabular}{|c|l|r|r|}
+\hline
+SETUP PARA CURVA & CI 7400\\
+\hline
+De & Para\\
+\hline
+PINO 1 & Fonte variável e Pino 2\\
+\hline
+PINO 2 & Pino 1\\
+\hline
+PINO 3 & Multímetro\\
+\hline
+PINO 4 & NULL\\
+\hline
+PINO 5 & NULL\\
+\hline
+PINO 6 & NULL\\
+\hline
+PINO 7 & GND\\
+\hline
+PINO 8 & NULL\\
+\hline
+PINO 9 & NULL\\
+\hline
+PINO 10 & NULL\\
+\hline
+PINO 11 & NULL\\
+\hline
+PINO 12 & NULL\\
+\hline
+PINO 13 & NULL\\
+\hline
+PINO 14 & VCC\\
+\hline
+\end{tabular}
+\singlespacing
+\fi
+
+\newpage
+\section{Diagramas Esquemáticos}
+
+\subsection{1º Circuito}
+
+%Exemplo de imagem
+\iffalse
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{nome_da_imagem}
+  \caption{Descrição}
+  \label{figRotulo}
+\end{figure}
+\fi
+
+\newpage
+\subsection{2º Circuito}
+
+\end{document}
