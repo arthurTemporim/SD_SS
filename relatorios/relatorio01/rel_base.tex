@@ -1,0 +1,180 @@
+%Centralizar verticalmente.
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+%Centralizar horizontalmente.
+\newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
+\documentclass[12pts]{article}
+\usepackage[utf8]{inputenc} 
+\title{
+	Sistemas Digitais (119466)
+	Unb - Gama
+	\singlespace
+	Turma E
+	\singlespacing
+	\begin{midpage}
+	\begin {large}
+		Relatório Experimento 1
+		\singlespace
+		Portas Lógicas
+	\end {large}
+	\end{midpage}
+}
+\date{Agosto 20, 2016}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\begin{document}
+\maketitle	
+%\vspace{100 mm}
+\begin{center}
+
+\begin{tabular}{|c|l|r|}
+\hline
+Nome & Matrícula & Assinatura\\
+\hline
+Arthur Temporim & 140016759 & \\
+\hline	
+Eduardo Nunes & 140056189 & \\
+\hline	
+\end{tabular}
+
+\end{center}
+
+
+\newpage
+
+\section{Sumário}
+
+\begin{itemize}
+	\item Introdução
+	\singlespacing
+	\item Parte Experimental
+	\singlespacing
+	\item Discussão
+	\singlespacing
+	\item Conclusões 
+	\singlespacing
+	\item Referências Bibliograficas
+	\singlespacing
+	\item Diagramas esquemáticos
+\end{itemize}
+
+\newpage
+
+
+\section{Introdução}
+\iffalse
+Introdução, indicando a delimitação do tema, apresentando a justificativa descrevendo o propósito do relatório.
+\fi
+
+\section{Procedimentos}
+\iffalse
+Parte Experimental, descrevendo os passos realizados, dificuldades e soluções para os problemas encontrados. Aqui, deve-se apresentar uma descrição dos resultados encontrados em forma de figuras, gráficos e tabelas.
+\fi
+
+\section{Discussão}
+\iffalse
+Discussão sobre os resultados encontrados, comentando detalhadamente as medições realizadas e dando a devida interpretação destas, informando se os objetivos da experimento foram alcançados. Esta é uma das partes mais importantes do relatório: aqui, há oportunidade para expressar os conhecimentos adquiridos na prática e fazer a interrelação com os fundamentos teóricos.
+\fi
+
+\section{Conclusões}
+\iffalse
+Conclusões, mostrando os êxitos e eventuais problemas encontrados na realização do experimento, indicando as limitações, apresentando recomendações e/ou sugestões.
+\fi
+
+\section{Referências Bibliográficas}
+\iffalse
+Referencias Bibliográficas, relacionadas e citadas de acordo com as normas da ABNT.
+\fi
+Laboratório de Sistemas Digitais I 2015.1 professores Fabiano Soares, 
+José Felício Marcus Chaffim Renato Lopes UnB - FGA Março de 2015.
+
+\section{Diagramas Esquemáticos}
+\iffalse
+Diagramas Esquemáticos. Todos os diagramas devem ser inseridos ao final do relatório em páginas separadas do texto, indicando a identificação do circuito, autor, revisor, versão e datas relevantes.
+\fi
+
+%Exemplo de tabela:
+\iffalse
+\singlespacing
+\begin{tabular}{|c|l|r|r|}
+\hline
+SETUP PARA CURVA & CI 7400\\
+\hline
+De & Para\\
+\hline
+PINO 1 & Fonte variável e Pino 2\\
+\hline
+PINO 2 & Pino 1\\
+\hline
+PINO 3 & Multímetro\\
+\hline
+PINO 4 & NULL\\
+\hline
+PINO 5 & NULL\\
+\hline
+PINO 6 & NULL\\
+\hline
+PINO 7 & GND\\
+\hline
+PINO 8 & NULL\\
+\hline
+PINO 9 & NULL\\
+\hline
+PINO 10 & NULL\\
+\hline
+PINO 11 & NULL\\
+\hline
+PINO 12 & NULL\\
+\hline
+PINO 13 & NULL\\
+\hline
+PINO 14 & VCC\\
+\hline
+\end{tabular}
+\singlespacing
+\fi
+
+\newpage
+\end{document}
+
+%Exemplo de imagem
+\iffalse
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{nome_da_imagem}
+  \caption{Descrição}
+  \label{figRotulo}
+\end{figure}
+\fi
+
+% Exemplo de tabela.
+\iffalse
+\begin{tabular}{|c|r|}
+\hline
+Material Utilizado & Quantidade\\
+\hline
+Cabo Banana-Banana & 2  \\
+\hline
+Fios de cobre & x \\
+\hline
+Cabo coaxial & 3  \\
+\hline
+CI 74HC00   & 1 \\
+\hline
+CI 74LS00   & 1 \\
+\hline
+Protoboard & 2 \\
+\hline
+Fonte de tensão MPL-3305M & 1 \\
+\hline	
+Multímetro Digital  & 1 \\
+\hline
+Gerador de funçoes iCEL modelo GV-2002 & 1 \\
+\hline
+Osciloscopio BK 2530 & 1 \\
+\hline
+\end{tabular}
+\singlespacing
+\fi
