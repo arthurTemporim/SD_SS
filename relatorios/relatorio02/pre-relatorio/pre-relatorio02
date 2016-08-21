@@ -1,0 +1,15 @@
+1) Quantas entradas e saídas tem o circuito?
+O circuito tem 3 entradas sendos estas: A,B e C. E uma saída sendo esta: S.
+
+2) O circuito apresenta uma porta E de três entradas. Como é possível obtê-la a partir de portas E de duas entradas? Justifique.
+A partir de duas portas AND, utilizando uma para verificar os valores de duas entradas e logo em seguida uma outra para verificar o valor da primeira verificação com uma terceira entrada.
+
+3) Apresente a tabela-verdade do circuito;
+
+A tabela esta em um arquivo no drive
+
+4) Explique o que este circuito faz, i.e., apresente uma possível função para o mesmo.
+
+O circuito representado pela figura 2.1, compara os valores de 3 entradas. Se o nível de duas entradas ou mais, forem altos, então, este terá um sinal alto em sua saída.
+Uma possível função para este seria em uma compra para o show se o comprador tiver carteirinha ou 1Kg de alimento ou o cartão de filiação este poderá pagar a meia entrada.
+Uma função booleana para este circuito seria: S = AB + AC + BC.
