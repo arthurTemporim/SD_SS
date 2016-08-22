@@ -6,9 +6,8 @@
 \usepackage[utf8]{inputenc} 
 \title{
 	Prática de Eletrônica Digital 1 - (119466)
-	Unb - Gama
-	\singlespace
-	Turma E
+	\singlespacing
+		Turma E (Unb - Gama)
 	\singlespacing
 	\begin{midpage}
 	\begin {large}
@@ -57,7 +56,7 @@ Eduardo Nunes & 140056189 & \\
 	\singlespacing
 	\item Referências Bibliograficas
 	\singlespacing
-	\item Diagramas esquemáticos
+	%\item Diagramas esquemáticos
 \end{itemize}
 
 \newpage
@@ -95,24 +94,132 @@ Consequência: É exibido um sumário a respeito das configurações do ambiente
 \textbf{Passo 04:} Com os passos anteriores finalizados, basta criar um novo projeto para iniciar as simulações.
 \singlespacing
 
-
+\newpage
 \textbf{2. As telas capturadas durante as atividades no ambiente de laboratório;}
 \singlespacing
 
+\textbf{Atividade 01: NAND}
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3]{Atividade01}
+  \caption{Diagrama de ondas NAND - Ise Design Suite 14.7}
+  \label{figRotulo}
+\end{figure}
 
+\newpage
+\textbf{Atividade 02: XNOR}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3]{Atividade02}
+  \caption{Diagrama de ondas XNOR - Ise Design Suite 14.7}
+  \label{figRotulo}
+\end{figure}
+\singlespacing
+
+Tabela Verdade XNOR:
+
+\begin{center}
+	\begin{tabular}{|r|r|r|}
+		\hline
+		A & B & S\\
+		\hline
+		0 & 0 & 1\\
+		\hline
+		0 & 1 & 0\\
+		\hline
+		1 & 0 & 0\\
+		\hline
+		1 & 1 & 1\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\newpage
+\textbf{Atividade 03: NAND e XNOR em VHDL}
+\singlespacing
+
+	Na imagem abaixo contém o diagrama de ondas das duas portas feitas em VHDL. É possível notar que o resultado final é o mesmo que os anteriores.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3]{Atividade03}
+  \caption{Diagrama de ondas NAND e XNOR - Ise Design Suite 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\textbf{Atividade 04: AND3}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3]{Atividade04}
+  \caption{Diagrama de ondas AND3 - Ise Design Suite 14.7}
+  \label{figRotulo}
+\end{figure}
+
+Tabela Verdade AND3:
+
+\begin{center}
+	\begin{tabular}{|r|r|r|r|}
+		\hline
+		A & B & C & S\\
+		\hline
+		0 & 0 & 0 & 0\\
+		\hline
+		0 & 0 & 1 & 0\\
+		\hline
+		0 & 1 & 0 & 0\\
+		\hline
+		0 & 1 & 1 & 0\\
+		\hline
+		1 & 0 & 0 & 0\\
+		\hline
+		1 & 0 & 1 & 0\\
+		\hline
+		1 & 1 & 0 & 0\\
+		\hline
+		1 & 1 & 1 & 1\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\newpage
 \textbf{3. Uma comparação entre os métodos de descrição das portas lógicas (circuito usando símbolos lógicos, tabela-verdade, expressão booleana, código VHDL);}
 \singlespacing
 
+	A partir da tabela-verdade é capaz de se analisar uma ou mais conjutos de portas lógicas individualmente. É um forma eficiente para listar as possíveis combinações de entrada.
 
+	Expressão booleana possibilita desenhar com maior facilidade o diagrama do circuito, pois a visualização das portas que serão necessarias para construir um circuito é melhor evidenciado. Já o código VHDL, facilita a projeção da implementação de um circuito lógico.
 
+\singlespacing
 \textbf{4. Simulação do circuito da Atividade 4 em um simulador diferente do usado em sala, apresentando as formas de onda correspondentes. Compare os dois simuladores levando em conta os seguintes aspectos:}
 \singlespacing
+
+	Esta atividade foi feita utilizando o Software \textit{Qucs}. Segue abaixo uma imagem com o resultado da utilização do programa:
+	
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=1]{qucs}
+  \caption{Diagrama de ondas AND3 - Qucs}
+  \label{figRotulo}
+\end{figure}
+	
+	
 \begin{itemize}
 	\item \textbf{Facilidade de uso;}
+	
+	O Qucs, é bem mais leve e rápido ao ser comparado com o \textit{Ise Design Suit}, porém seu uso não é intuitivo. Com o \textit{Drag an Drop} seu uso fica mais fácil mas não é uma tarefa simples adicionar cada componente e navegar no seu menu como na outra ferramenta.
+	
 	\item \textbf{Possibilidade de uso de VHDL;}
+	
+	O \textit{Qucs} também contém a utilizaçao do VHDL para implementação de circuitos.
+	
 	\item \textbf{Flexibilidade na apresentação dos resultados desejados.}
 \end{itemize}
+
+	A apresentação dos resultados e a flexibilidade de vizualização é muito melhor com o \textit{Ise Design Suit}, podendo alterar o intervalo do diagrama de onda, cor e valor das entradas instantaneamente.
 
 
 \section{Discussão}
@@ -120,64 +227,27 @@ Consequência: É exibido um sumário a respeito das configurações do ambiente
 Discussão sobre os resultados encontrados, comentando detalhadamente as medições realizadas e dando a devida interpretação destas, informando se os objetivos da experimento foram alcançados. Esta é uma das partes mais importantes do relatório: aqui, há oportunidade para expressar os conhecimentos adquiridos na prática e fazer a interrelação com os fundamentos teóricos.
 \fi
 
+	Com a realização deste experimento foi possível adquirir o primeiro contato com o ambiente de descrição de hardware com o VHDL e implementação da parte mais primitiva dos circuitos lógicos, as portas lógicas.
+	
+	O icentivo de 2 programas distintos para a realização da mesma atividade também foi relevante para o aprendizado da dupla e compreensão da implementação de circuitos.
+
 \section{Conclusões}
 \iffalse
 Conclusões, mostrando os êxitos e eventuais problemas encontrados na realização do experimento, indicando as limitações, apresentando recomendações e/ou sugestões.
 \fi
 
+	Neste primeiro relatório foi possível realizar todas as atividade com êxito sem dificuldades significativas.
+
 \section{Referências Bibliográficas}
 \iffalse
 Referencias Bibliográficas, relacionadas e citadas de acordo com as normas da ABNT.
 \fi
-Laboratório de Sistemas Digitais I 2015.1 professores Fabiano Soares, 
-José Felício Marcus Chaffim Renato Lopes UnB - FGA Março de 2015.
+Prática de Eletrônica Digital I 2016.2 professores Henrique Marra Taira Menegaz,Leonardo Aguayo, Lourdes Mattos Brasil, Marcus Vinícius Chaffim Costa, Mariana Costa Bernardes Matias. UnB - FGA Agosto de 2015.
 
-\section{Diagramas Esquemáticos}
 \iffalse
+\section{Diagramas Esquemáticos}
 Diagramas Esquemáticos. Todos os diagramas devem ser inseridos ao final do relatório em páginas separadas do texto, indicando a identificação do circuito, autor, revisor, versão e datas relevantes.
 \fi
-
-%Exemplo de tabela:
-\iffalse
-\singlespacing
-\begin{tabular}{|c|l|r|r|}
-\hline
-SETUP PARA CURVA & CI 7400\\
-\hline
-De & Para\\
-\hline
-PINO 1 & Fonte variável e Pino 2\\
-\hline
-PINO 2 & Pino 1\\
-\hline
-PINO 3 & Multímetro\\
-\hline
-PINO 4 & NULL\\
-\hline
-PINO 5 & NULL\\
-\hline
-PINO 6 & NULL\\
-\hline
-PINO 7 & GND\\
-\hline
-PINO 8 & NULL\\
-\hline
-PINO 9 & NULL\\
-\hline
-PINO 10 & NULL\\
-\hline
-PINO 11 & NULL\\
-\hline
-PINO 12 & NULL\\
-\hline
-PINO 13 & NULL\\
-\hline
-PINO 14 & VCC\\
-\hline
-\end{tabular}
-\singlespacing
-\fi
-
 \newpage
 \end{document}
 
