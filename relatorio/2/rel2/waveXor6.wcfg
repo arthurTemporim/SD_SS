@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/arthur/Documents/sd/SD_SS/relatorio/2/rel2/xor5_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="xor5" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="2" />
+   <wave_markers>
+      <marker time="5000040000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/xor5/saidavhd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">saidavhd</obj_property>
+      <obj_property name="ObjectShortName">saidavhd</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus8" type="vbus" db_ref_id="1">
+      <obj_property name="label">New Virtual Bus</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/xor5/g" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">g</obj_property>
+         <obj_property name="ObjectShortName">g</obj_property>
+      </wvobject>
+      <wvobject fp_name="/xor5/h" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">h</obj_property>
+         <obj_property name="ObjectShortName">h</obj_property>
+      </wvobject>
+      <wvobject fp_name="/xor5/i" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">i</obj_property>
+         <obj_property name="ObjectShortName">i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/xor5/j" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">j</obj_property>
+         <obj_property name="ObjectShortName">j</obj_property>
+      </wvobject>
+      <wvobject fp_name="/xor5/k" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">k</obj_property>
+         <obj_property name="ObjectShortName">k</obj_property>
+      </wvobject>
+      <wvobject fp_name="/xor5/l" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">l</obj_property>
+         <obj_property name="ObjectShortName">l</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
