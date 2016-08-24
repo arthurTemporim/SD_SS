@@ -1,8 +1,15 @@
 *.out
 *.log
 *.aux
+<<<<<<< HEAD
 *.synctex.gz
 ret/1/imagens/
+=======
+
+
+
+*.synctex.gz
+>>>>>>> develop
 *.bld
 *.cmd_log
 *.lso
@@ -37,7 +44,28 @@ iseconfig/
 webtalk_pn.xml
 xlnx_auto_0_xdb/
 xst/
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> develop
 *.BMP
 *.pdsbak
 *.pdsbak
 *.pdsprj.ArthurNote.*
+<<<<<<< HEAD
+=======
+
+*.xmsgs
+*cmd
+*.jhd
+*.schlog
+*.vf
+*.exe
+*.wdb
+*.ini
+isim/
+sch2HdlBatchFile
+
+>>>>>>> develop
