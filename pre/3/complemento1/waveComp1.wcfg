@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/arthur/Documents/SD_SS/pre/3/complemento1/complemento1_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="complemento1" />
+            <top_module name="std_logic_1164" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="vbus8" type="vbus" db_ref_id="1">
+      <obj_property name="label">entrada</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject fp_name="/complemento1/e2" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">e2</obj_property>
+         <obj_property name="ObjectShortName">e2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/complemento1/e1" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">e1</obj_property>
+         <obj_property name="ObjectShortName">e1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/complemento1/e0" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">e0</obj_property>
+         <obj_property name="ObjectShortName">e0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus9" type="vbus" db_ref_id="1">
+      <obj_property name="label">saida</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/complemento1/s2" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">s2</obj_property>
+         <obj_property name="ObjectShortName">s2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/complemento1/s1" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">s1</obj_property>
+         <obj_property name="ObjectShortName">s1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/complemento1/s0" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">s0</obj_property>
+         <obj_property name="ObjectShortName">s0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/complemento1/sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sel</obj_property>
+      <obj_property name="ObjectShortName">sel</obj_property>
+   </wvobject>
+</wave_config>
