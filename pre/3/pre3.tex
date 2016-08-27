@@ -1,0 +1,131 @@
+%Centralizar verticalmente.
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+%Centralizar horizontalmente.
+\newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
+\documentclass[12pts]{article}
+\usepackage[utf8]{inputenc} 
+\title{
+	Prática de Eletrônica Digital 1 - (119466)
+	\singlespacing
+		Turma E (Unb - Gama)
+	\singlespacing
+	\begin{midpage}
+	\begin {large}
+		Pré-Relatório Experimento 3
+		\singlespace
+		Circuitos somatórios e subtratores
+	\end {large}
+	\end{midpage}
+}
+\date{Agosto 26, 2016}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\begin{document}
+\maketitle	
+%\vspace{100 mm}
+\begin{center}
+
+\begin{tabular}{|c|l|r|}
+\hline
+Nome & Matrícula & Assinatura\\
+\hline
+Arthur Temporim & 140016759 & \\
+\hline	
+Eduardo Nunes & 140056149 & \\
+\hline	
+\end{tabular}
+
+\end{center}
+
+\pagebreak
+
+\section{Pesquisa bibliográfica}
+
+Três tipos de somadores são utilizados com maior frequência. O meio somador, somador completo e somador completo paralelo.
+	
+O circuito meio somador é constituído por duas entradas, que são os dois bits a serem somados, uma saída, que é a resposta da soma, e o carry para a próxima posição. Para construí-lo, utilizamos a tabela verdade com essas quatro variáveis. 
+
+\begin{center}
+	\begin{tabular}{|r|r|r|r|}
+		\hline
+		A & B & S & Cout \\
+		\hline
+		0 & 0 & 0 & 0 \\				
+		\hline
+		0 & 1 & 1 & 0 \\
+		\hline
+		1 & 0 & 1 & 0 \\
+		\hline
+		1 & 1 & 0 & 1 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Podemos obsevar que a saída S é exatamente idêntica a uma por XOR entre A e B. e Cout é uma porta AND entre A e B. Assim, 
+
+IMAGEM 
+
+O circuito meio somado recebe esse nome pois não consegue fazer uma soma com números de dois bits com apenas um circuito. São necessários dois circuitos somadores por bit.  Pois, esse circuito tem a saída para o carry, porém, não tem a entrada para ele. É necessário acoplar outro circuito para fazer a soma do carry. Visto esse problema, foi desenvolvido o somador completo, que tem uma entrada para o carry e consegue fazer somas com um circuito por bit. Conseguimos encontrar o circuito do somador completo através da tabela verdade de uma soma.
+
+IMAGEM
+
+
+Utilizando as simplificações, podemos perceber que as saídas S e Cout tem o seguinte resultado:
+Assim, o circuito somador completo é representado pela simbologia a seguir.
+
+IMAGEM
+
+Dessa maneira, é possível calcular a soma das entradas e do carry para um bit.
+Para somar vários bits, são colocados vários SC em paralelo, um circuito por bit. A ligação pode ser observada a seguir.
+
+IMAGEM
+
+Para executar a subtração dos números, seria necessário o mesmo procedimento que foi feito com os somadores, o que dobraria o número de circuitos. Para evitar esse excesso de portas, foi desenvolvido um sistema, chamado complemento de 2, que faz uma transformação no número, tornando-o diferente. Esse número modificado, sempre que for somado a outro número, será tido como negativo. Ou seja, seu quisermos fazer a operação A - B, devemos aplicar o complemento de 2 no número B, tornando-o -B e somando-o a A. O resultado estará correto.
+A transformação do número em complemento de 2(CP2) é feita em duas etapas. Na primeira é feito o complemento de 1(CP1) , onde todos os bits do número são invertidos, por exemplo o 100. Ao aplicarmos CP1 temos 001. O resultado do CP1 é somado ao número 1, resultando assim o CP2. Portanto, temos que o CP2 de 100 é 010.
+
+\newpage
+
+\end{document}
+
+%Exemplo de imagem
+\iffalse
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{nome_da_imagem}
+  \caption{Descrição}
+  \label{figRotulo}
+\end{figure}
+\fi
+
+% Exemplo de tabela.
+\iffalse
+\begin{tabular}{|c|r|}
+\hline
+Material Utilizado & Quantidade\\
+\hline
+Cabo Banana-Banana & 2  \\
+\hline
+Fios de cobre & x \\
+\hline
+Cabo coaxial & 3  \\
+\hline
+CI 74HC00   & 1 \\
+\hline
+CI 74LS00   & 1 \\
+\hline
+Protoboard & 2 \\
+\hline
+Fonte de tensão MPL-3305M & 1 \\
+\hline	
+Multímetro Digital  & 1 \\
+\hline
+Gerador de funçoes iCEL modelo GV-2002 & 1 \\
+\hline
+Osciloscopio BK 2530 & 1 \\
+\hline
+\end{tabular}
+\singlespacing
+\fi
