@@ -5,7 +5,7 @@ entity somaSub is
 	Port (
 		A   : in std_logic_vector (2 downto 0) := "001";
 		B   : in std_logic_vector (2 downto 0) := "001";
-		sel : in std_logic := '0';
+		sel : in std_logic := '1';
 		S   : out std_logic_vector (2 downto 0);
 		E   : out std_logic
 	);
@@ -15,13 +15,15 @@ architecture Behavioral of somaSub is
 
 signal aux   : std_logic_vector (2 downto 0);
 signal c     : std_logic;
+signal c2    : std_logic;
+signal ccomp : std_logic;
 signal over  : std_logic;
---signal comp1 : std_logic_vector (2 downto 0);
---signal comp2 : std_logic_vector (2 downto 0);
+signal comp1 : std_logic_vector (2 downto 0);
+signal comp2 : std_logic_vector (2 downto 0);
 
 begin
 
-	process (a,b,sel,c)
+	process (a,b,sel,c,c2,comp1,comp2,ccomp,aux)
 	begin
 		-- Soma
 		if (sel = '0') then
@@ -33,8 +35,23 @@ begin
 			over <= c xor aux(2);
 		--subtrai
 		else
+		-- Aplica complemento de 1 no B
+			comp1 <= b xor "111";
+
+		-- Aplica complemento de 2 no B
+			comp2(0) <= comp1(0) xor '1';
+			ccomp <= comp1(0) and '1';
+			comp2(1) <= comp1(1) xor ccomp;
+			comp2(2) <= (comp1(1) and '1') or (comp1(1) and ccomp) or ('1' and ccomp);
+			
+		-- Faz a soma
+			aux(0) <= a(0) xor comp2(0) xor comp2(2);
+			c2 <= (a(0) and comp2(0)) or (a(0) and ccomp) or (comp2(0) and ccomp);
+			aux(1) <= a(1) xor comp2(1) xor c2;
+			aux(2) <= (a(1) and comp2(1)) or (a(1) and c2) or (comp2(1) and c2);
+			
+			over <= c2 xor aux(2);			
 		end if;
---		s <= aux(2 downto 0);
 	end process;
 	
 	e <= over;
