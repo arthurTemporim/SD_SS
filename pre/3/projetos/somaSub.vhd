@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity somaSub is
 	Port (
-		A   : in std_logic_vector (2 downto 0) := "001";
+		A   : in std_logic_vector (2 downto 0) := "011";
 		B   : in std_logic_vector (2 downto 0) := "001";
-		sel : in std_logic := '1';
+		sel : in std_logic := '0';
 		S   : out std_logic_vector (2 downto 0);
 		E   : out std_logic
 	);
@@ -18,12 +18,13 @@ signal c     : std_logic;
 signal c2    : std_logic;
 signal ccomp : std_logic;
 signal over  : std_logic;
+signal igua  : std_logic;
 signal comp1 : std_logic_vector (2 downto 0);
 signal comp2 : std_logic_vector (2 downto 0);
 
 begin
 
-	process (a,b,sel,c,c2,comp1,comp2,ccomp,aux)
+	process (a,b,sel,c,c2,comp1,comp2,ccomp,aux, igua)
 	begin
 		-- Soma
 		if (sel = '0') then
@@ -32,7 +33,8 @@ begin
 			aux(1) <= a(1) xor b(1) xor c;
 			aux(2) <= (a(1) and b(1)) or (a(1) and c) or (b(1) and c);
 			
-			over <= c xor aux(2);
+			igua <= not(a(0) xor b(0));
+			over <= c and igua;
 		--subtrai
 		else
 		-- Aplica complemento de 1 no B
@@ -45,12 +47,13 @@ begin
 			comp2(2) <= (comp1(1) and '1') or (comp1(1) and ccomp) or ('1' and ccomp);
 			
 		-- Faz a soma
-			aux(0) <= a(0) xor comp2(0) xor comp2(2);
+			aux(0) <= a(0) xor comp2(0);
 			c2 <= (a(0) and comp2(0)) or (a(0) and ccomp) or (comp2(0) and ccomp);
 			aux(1) <= a(1) xor comp2(1) xor c2;
-			aux(2) <= (a(1) and comp2(1)) or (a(1) and c2) or (comp2(1) and c2);
+			aux(2) <= (a(1) and comp2(1)) or (a(1) and c2);
 			
-			over <= c2 xor aux(2);			
+			igua <= not(a(0) xor comp2(0));
+			over <= c2 and igua;		
 		end if;
 	end process;
 	

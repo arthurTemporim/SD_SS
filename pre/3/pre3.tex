@@ -3,7 +3,17 @@
 %Centralizar horizontalmente.
 \newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
 \documentclass[12pts]{article}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
+%Pacote para colocar cor no código.
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+%Pacote para inserir código.
+\usepackage{listings}
+\lstset{
+    numbers=left,
+    tabsize=2,
+    backgroundcolor=\color{light-gray},
+}
 \title{
 	Prática de Eletrônica Digital 1 - (119466)
 	\singlespacing
@@ -87,6 +97,11 @@ Para executar a subtração dos números, seria necessário o mesmo procedimento
 A transformação do número em complemento de 2(CP2) é feita em duas etapas. Na primeira é feito o complemento de 1(CP1) , onde todos os bits do número são invertidos, por exemplo o 100. Ao aplicarmos CP1 temos 001. O resultado do CP1 é somado ao número 1, resultando assim o CP2. Portanto, temos que o CP2 de 100 é 010.
 
 \newpage
+
+\section{Projetos e Simulações}
+\subsection{Projeto1 - Complemento de 1}
+\lstinputlisting[language=vhdl]{complemento1/complemento1.vhd}
+
 
 \end{document}
 
