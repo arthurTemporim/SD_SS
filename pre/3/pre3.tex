@@ -76,22 +76,53 @@ O circuito meio somador é constituído por duas entradas, que são os dois bits
 
 Podemos obsevar que a saída S é exatamente idêntica a uma por XOR entre A e B. e Cout é uma porta AND entre A e B. Assim, 
 
-IMAGEM 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.8	]{imagens/1}
+  \label{figRotulo}
+\end{figure}
 
 O circuito meio somado recebe esse nome pois não consegue fazer uma soma com números de dois bits com apenas um circuito. São necessários dois circuitos somadores por bit.  Pois, esse circuito tem a saída para o carry, porém, não tem a entrada para ele. É necessário acoplar outro circuito para fazer a soma do carry. Visto esse problema, foi desenvolvido o somador completo, que tem uma entrada para o carry e consegue fazer somas com um circuito por bit. Conseguimos encontrar o circuito do somador completo através da tabela verdade de uma soma.
 
-IMAGEM
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6	]{imagens/2}
+  \label{figRotulo}
+\end{figure}
 
 
 Utilizando as simplificações, podemos perceber que as saídas S e Cout tem o seguinte resultado:
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6	]{imagens/3}
+  \label{figRotulo}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6	]{imagens/4}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
 Assim, o circuito somador completo é representado pela simbologia a seguir.
 
-IMAGEM
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6	]{imagens/5}
+  \label{figRotulo}
+\end{figure}
+
 
 Dessa maneira, é possível calcular a soma das entradas e do carry para um bit.
 Para somar vários bits, são colocados vários SC em paralelo, um circuito por bit. A ligação pode ser observada a seguir.
 
-IMAGEM
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6	]{imagens/6}
+  \label{figRotulo}
+\end{figure}
 
 Para executar a subtração dos números, seria necessário o mesmo procedimento que foi feito com os somadores, o que dobraria o número de circuitos. Para evitar esse excesso de portas, foi desenvolvido um sistema, chamado complemento de 2, que faz uma transformação no número, tornando-o diferente. Esse número modificado, sempre que for somado a outro número, será tido como negativo. Ou seja, seu quisermos fazer a operação A - B, devemos aplicar o complemento de 2 no número B, tornando-o -B e somando-o a A. O resultado estará correto.
 A transformação do número em complemento de 2(CP2) é feita em duas etapas. Na primeira é feito o complemento de 1(CP1) , onde todos os bits do número são invertidos, por exemplo o 100. Ao aplicarmos CP1 temos 001. O resultado do CP1 é somado ao número 1, resultando assim o CP2. Portanto, temos que o CP2 de 100 é 010.
