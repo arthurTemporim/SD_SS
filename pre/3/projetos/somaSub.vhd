@@ -21,7 +21,7 @@ signal over  : std_logic;
 
 begin
 
-	process (a,b,sel)
+	process (a,b,sel,c)
 	begin
 		-- Soma
 		if (sel = '0') then
