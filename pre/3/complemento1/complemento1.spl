@@ -1,0 +1,10 @@
+[Inputs]
+e0
+e1
+e2
+sel
+[Outputs]
+s0
+s1
+s2
+[BiDir]

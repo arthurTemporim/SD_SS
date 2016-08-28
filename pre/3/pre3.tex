@@ -100,12 +100,137 @@ A transformação do número em complemento de 2(CP2) é feita em duas etapas. N
 
 \section{Projetos e Simulações}
 \subsection{Projeto1 - Complemento de 1}
-\subsubsection{Diagrama}
-\subsubsection{Plano de validação}
-\subsubsection{código VHDL}
+\subsubsection{Diagramas}
 
+\textbf{Diagrama alto nível:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/complementoSc1}
+  \caption{Diagrama 1 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\textbf{Diagrama 2 }
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/complementoSc2}
+  \caption{Diagrama 2 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+
+\subsubsection{Plano de validação}
+
+Para Assegurar que o circuito está com o comportamento correto foram feitos os seguinstes testes:
+
+\begin{center}
+	\begin{tabular}{|r|r|r|}
+		\hline
+		Entrada & sel & saida \\
+		\hline
+		000 & 1 & 111 \\
+		\hline
+		000 & 0 & 000 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\newpage
+\subsubsection{Código VHDL}
 
 \lstinputlisting[language=vhdl]{complemento1/complemento1.vhd}
+
+\newpage
+\subsubsection{Forma de onda}
+
+\textbf{Forma de onda gerada pelo circuito.}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/complemento1}
+  \caption{Forma de onda - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\subsection{Projeto3 - Somador/Subtrator 3 bits}
+\subsubsection{Diagramas}
+
+\textbf{Diagrama alto nível:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/somaSub1}
+  \caption{Diagrama 1 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\textbf{Diagrama 2 }
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/somaSub2}
+  \caption{Diagrama 2 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+
+\subsubsection{Plano de validação}
+
+Para assegurar que o circuito está com o comportamento correto foram feitos os seguinstes testes:
+
+\begin{center}
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+		Entrada1 & Entrada2 & Sel & Saida & Overflow\\
+		\hline
+		001 & 001 & 0 & 010 & 0\\
+		\hline
+		010 & 001 & 1 & 001 & 0\\
+		\hline
+		011 & 001 & 0 & 100 & 1\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\newpage
+\subsubsection{Código VHDL}
+
+\lstinputlisting[language=vhdl]{projetos/somaSub.vhd}
+
+\newpage
+\subsubsection{Forma de onda}
+
+\textbf{Forma de onda gerada pelo circuito. SOMA:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/soma}
+  \caption{Forma de onda - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\textbf{SUBTRAÇÃO:}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/sub}
+  \caption{Forma de onda - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\textbf{OVERFLOW:}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{imagens/overflow}
+  \caption{Forma de onda - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
 
 
 \end{document}

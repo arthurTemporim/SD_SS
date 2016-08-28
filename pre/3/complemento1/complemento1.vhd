@@ -2,31 +2,26 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity complemento1 is
-    Port ( e0 : in  STD_LOGIC;
-			  e1 : in  STD_LOGIC;
-           e2 : in  STD_LOGIC;
-           sel : in  STD_LOGIC;
-			  s0 : out  STD_LOGIC;
-           s1 : out  STD_LOGIC;
-           s2 : out  STD_LOGIC);
+    Port ( entrada : in  STD_LOGIC_VECTOR (2 downto 0) := "000";
+           sel     : in  STD_LOGIC := '1';
+			  saida   : out STD_LOGIC_VECTOR (2 downto 0)
+	 );
 end complemento1;
 
 architecture Behavioral of complemento1 is
 
+signal aux : STD_LOGIC_VECTOR (2 downto 0);
+
 begin
 
-process (e0,e1,e2,sel)
+process (entrada,sel,aux)
 	begin
 		if (sel = '1') then
-			s0 <= e0 xor '1';
-			s1 <= e1 xor '1';
-			s2 <= e2 xor '1';
+			aux <= entrada xor "111";
 		else
-			s0 <= e0;
-			s1 <= e1;
-			s2 <= e2;
+			aux <= entrada;
 		end if;
 end process;
-
+	saida <= aux;
 end Behavioral;
 
