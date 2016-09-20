@@ -4,17 +4,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity projeto1 is
 	port (
 		e : in  std_logic_vector (3 downto 0):= "0100";
-		s: out std_logic_vector (3 downto 0)
+		s: out std_logic_vector (6 downto 0)
 	);
 end projeto1;
 
 architecture Behavioral of projeto1 is
-signal aux : std_logic_vector (3 downto 0);
+
 begin
 
-aux(0) <= ((not e(1)) and (not e(3))) or ((not e(0)) and e(2)) or (e(0) and (not e(3))) or (e(1) and e(2)) or ((not e(0)) and e(1) and e(3)) or (e(0) and (not e(1)) and (not e(2)));
 
-s(0) <= aux(0);
+s <= "1111110" when e = "0000" else
+	  "0110000" when e = "0001" else
+	  "1101101" when e = "0010" else
+	  "1111001" when e = "0011" else
+	  "0110010" when e = "0100" else
+	  "1011010" when e = "0101" else
+	  "1011111" when e = "0110" else
+	  "1110000" when e = "0111" else
+	  "1111111" when e = "1000" else
+	  "1111011" when e = "1001" else
+	  "1110111" when e = "1010" else
+	  "0011111" when e = "1011" else
+	  "1001110" when e = "1100" else
+	  "0111101" when e = "1101" else
+	  "1001111" when e = "1110" else
+	  "1000111" when e = "1111";
 
 end Behavioral;
 
