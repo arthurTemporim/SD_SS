@@ -1,0 +1,32 @@
+* Pegar mais dados relacionados aos jogos.
+* já no projeto, planejamento, pensar em todas as coletas de dados.
+  - Medir as questões psicológicas.
+  - Ler livro de psicologia do pascoale. (psicometria)
+* Medir individualmente cada valor (6).
+  - Ser transparente para o jogador.
+* Controle do processo de aprendizado.
+* Tendência dos alunos para o tópico do Octalasys.
+* Definição dos base.
+* Criação dos stakeholders.
+* Criação de perfis para os stakeholders onde podem compartilhar conhecimentos
+e rotacionar conhecimentos do produto e desenvolvimento e vice e versa.
+* Efetuar o contato com o Luis.
+* Definição das escolas a serem avaliadas.
+* Agendar as visitas nas escolas.
+* Verificar a disponibilidade da internet, verificar o dispositivo masi comum.
+  - Marcar horários de workshops definidos.
+  - Criação de cultura de compartilhar conhecimento (coloquio - interação
+de todos os participantes).
+  - Definição de 1 hora.
+* Atualizar o cronograma.
+* gitLab - Fábrica.
+* Ferramenta livre que dê a opção de gerência.
+
+
+# Um ciclo de fases em que cada fase representa cada um dos 6 valores,
+e cada fase se apronfunda mais no valor relacionado.
+# Criação de um avatar, onde ele pode crescer de acordo com a abilidade
+desejada.
+
+$ Ideia de ter sala de vidros.
+$ Área externa, com deck.
