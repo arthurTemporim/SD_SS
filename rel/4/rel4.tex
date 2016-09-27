@@ -69,7 +69,7 @@ Eduardo Nunes & 14/0056189 & \\
 Introdução, indicando a delimitação do tema, apresentando a justificativa descrevendo o propósito do relatório.
 \fi
 
-	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento os mapas de Karnaugh, o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta \textit{Ise design suite}.
+	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento os mapas de Karnaugh, o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta: \textit{Ise design suite}.
 
 \section{Experimentos}
 \iffalse
@@ -82,10 +82,11 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 	O primeiro experimento tratou-se da realização do mapa de Karnaugh com a mesma tabela do pré relatório quatro. Porém, foi solicitado que despresassemos os hexadecimais, ou seja, que utilizassemos apenas os dez primeiros valores da tabela. Abaixo as imagens, respectivamente, são: Mapas de Karnaugh, Código vhdl e a saída obtida em forma de onda.
 \singlespacing
 
-	\textbf{Mapas de Karnaugh}
-\center{
+	\subsection{Mapas de Karnaugh}
+
 	\begin{table}[h]
-	\begin{tabular}{|l|l|l|l|l|}
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
@@ -101,12 +102,12 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 	\caption{Mapa de Karnaugh da saida A. Equação: A = C + A + !B!D + BD }
 	\end{table}
 	\singlespacing
-}
 
-\center{
+
 	\begin{table}[h]
-	\begin{tabular}{|l|l|l|l|l|}
-		\hline
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+			\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
 		\textbf{00} & 1 & 1 & 1 & 1\\
@@ -121,12 +122,13 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 	\caption{Mapa de Karnaugh da saida B. Equação: B = !B + !C!D + CD }
 	\end{table}
 	\singlespacing
-}
 
-\center{
+	\newpage
+
 	\begin{table}[h]
-	\begin{tabular}{|l|l|l|l|l|}
-		\hline
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
 		\textbf{00} & 1 & 1 & 1 & 0\\
@@ -138,23 +140,109 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\textbf{10} & 1 & 1 & X & X\\
 		\hline
 	\end{tabular}
-	\caption{Mapa de Karnaugh da saida B. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida C. Equação: C = !C + B + D }
 	\end{table}
 	\singlespacing
-}
+
+
+	\begin{table}[h]
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 1 & 1 & 1 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida D. Equação: D = A + B!CD + C!A!B + !B!D }
+	\end{table}
+	\singlespacing
+
+
+	\begin{table}[h]
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 0 & 1\\
+		\hline
+		\textbf{01} & 0 & 0 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 0 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida E. Equação: E = !B!D + C!D}
+	\end{table}
+	\singlespacing
+
+	\begin{table}[h]
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 0 & 0\\
+		\hline
+		\textbf{01} & 1 & 1 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida F. Equação: F = A + B!C + B!D + !C!D}
+	\end{table}
+	\singlespacing
+
+	\newpage
+
+	\begin{table}[h]
+	\centering	
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 0 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 0 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida G. Equação: G = A + C(!D + B}
+	\end{table}
+	\singlespacing
+
+\newpage
+\subsection{Código VHDL}
+\lstinputlisting[language=vhdl]{projeto1.vhd}
+\newpage
+
+\subsection{Diagrama do circuito}
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.6]{img/diagrama01}
-  \caption{Diagrama do circuito xor de 6 entradas - Ise Design Suite 14.7}	
+  \includegraphics[scale=0.4]{img/circuito}
+  \caption{Diagrama do circuito - Ise Design Suite 14.7}	
   \label{figRotulo}
 \end{figure}
 
+\subsection{Diagrama de onda}
 \begin{figure}[!htb]
   \centering
-
-  \includegraphics[scale=0.4]{img/saida01}
-  \caption{Diagrama de ondas xor de 6 entradas - Ise Design Suite 14.7}
+  \includegraphics[scale=0.3]{img/onda}
+  \caption{Diagrama de onda - Ise Design Suite 14.7}
   \label{figRotulo}
 \end{figure}
 \newpage
