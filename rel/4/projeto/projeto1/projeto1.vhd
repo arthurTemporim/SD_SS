@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity fdsa is
 	port (
-		e : in  std_logic_vector (3 downto 0):= "0100";
+		e : in  std_logic_vector (3 downto 0):= "0001";
 		s: out std_logic_vector (6 downto 0)
 	);
 end fdsa;

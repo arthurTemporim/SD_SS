@@ -12,7 +12,7 @@ architecture Behavioral of projeto1 is
 
 begin
 
-
+-- Alteração feita para relatório.
 s <= "1111110" when e = "0000" else
 	  "0110000" when e = "0001" else
 	  "1101101" when e = "0010" else
@@ -22,6 +22,6 @@ s <= "1111110" when e = "0000" else
 	  "1011111" when e = "0110" else
 	  "1110000" when e = "0111" else
 	  "1111111" when e = "1000" else
-	  "1111011" when e = "1001" else
+	  "1111011" when e = "1001";
 end Behavioral;
 
