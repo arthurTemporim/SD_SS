@@ -11,9 +11,9 @@
 	\singlespacing
 	\begin{midpage}
 	\begin {large}
-		Relatório Experimento 3
+		Relatório Experimento 4
 		\singlespace
-		Circuitos codificadores
+		Circuitos Codificadores
 	\end {large}
 	\end{midpage}
 }
@@ -32,9 +32,11 @@
 \hline
 Nome & Matrícula & Assinatura\\
 \hline
-Arthur Temporim & 140016759 & \\
+
+Arthur Temporim & 14/0016759 & \\
 \hline	
-Eduardo Nunes & 140056189 & \\
+Eduardo Nunes & 14/0056189 & \\
+
 \hline	
 \end{tabular}
 
@@ -66,7 +68,8 @@ Eduardo Nunes & 140056189 & \\
 \iffalse
 Introdução, indicando a delimitação do tema, apresentando a justificativa descrevendo o propósito do relatório.
 \fi
-	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta \textit{Ise design suite}.
+
+	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento os mapas de Karnaugh, o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta \textit{Ise design suite}.
 
 \section{Experimentos}
 \iffalse
@@ -75,17 +78,81 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 
 \textbf{Experimento 01}
 \singlespacing
-	O primeiro experimento tratou-se da realização do mapa de Karnaugh com a mesma tabela do pré relatório quatro. Porém, foi solicitado que despresassemos os hexadecimais, ou seja, que utilizassemos apenas os dez primeiros valores da tabela. Abaixo as imagens, respectivamente, são: Código vhdl e a saída obtida em forma de onda.
+
+	O primeiro experimento tratou-se da realização do mapa de Karnaugh com a mesma tabela do pré relatório quatro. Porém, foi solicitado que despresassemos os hexadecimais, ou seja, que utilizassemos apenas os dez primeiros valores da tabela. Abaixo as imagens, respectivamente, são: Mapas de Karnaugh, Código vhdl e a saída obtida em forma de onda.
+\singlespacing
+
+	\textbf{Mapas de Karnaugh}
+\center{
+	\begin{table}[h]
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 1 & 1 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida A. Equação: A = C + A + !B!D + BD }
+	\end{table}
+	\singlespacing
+}
+
+\center{
+	\begin{table}[h]
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 1 & 1 & 1\\
+		\hline
+		\textbf{01} & 1 & 0 & 1 & 0\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida B. Equação: B = !B + !C!D + CD }
+	\end{table}
+	\singlespacing
+}
+
+\center{
+	\begin{table}[h]
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 1 & 1 & 0\\
+		\hline
+		\textbf{01} & 1 & 1 & 1 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+	\caption{Mapa de Karnaugh da saida B. Equação: C = !C + B + D }
+	\end{table}
+	\singlespacing
+}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.6]{img/diagrama01}
-  \caption{Diagrama do circuito xor de 6 entradas - Ise Design Suite 14.7}
+  \caption{Diagrama do circuito xor de 6 entradas - Ise Design Suite 14.7}	
   \label{figRotulo}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
+
   \includegraphics[scale=0.4]{img/saida01}
   \caption{Diagrama de ondas xor de 6 entradas - Ise Design Suite 14.7}
   \label{figRotulo}
@@ -104,8 +171,8 @@ Com a realização deste experimento foi possível adquirir conhecimento a respe
 Conclusões, mostrando os êxitos e eventuais problemas encontrados na realização do experimento, indicando as limitações, apresentando recomendações e/ou sugestões.
 \fi
 
-
 Neste quarto relatório foi possível realizar o experimento com êxito porém houve dificuldade na criação do código em vhdl na qual a dupla tentou experimentar uma outra forma de fazer o código porém não obteve exito tendo se que adotar a mesma forma na qual foi feito o pré relatório. Desta forma, foi obtido os resultados esperados.
+
 
 
 \section{Referências Bibliográficas}
@@ -119,6 +186,7 @@ Prática de Eletrônica Digital I 2016.2 professores Henrique Marra Taira Menega
 Diagramas Esquemáticos. Todos os diagramas devem ser inseridos ao final do relatório em páginas separadas do texto, indicando a identificação do circuito, autor, revisor, versão e datas relevantes.
 \fi
 \newpage
+
 \end{document}
 
 %Exemplo de imagem
@@ -160,3 +228,4 @@ Osciloscopio BK 2530 & 1 \\
 \end{tabular}
 \singlespacing
 \fi
+
