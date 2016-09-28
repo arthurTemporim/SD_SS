@@ -1,0 +1,96 @@
+%Centralizar verticalmente.
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+%Centralizar horizontalmente.
+\newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
+\documentclass[12pts]{article}
+\usepackage[utf8]{inputenc}
+%Pacote para colocar cor no código.
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+%Pacote para inserir código.
+\usepackage{listings}
+\lstset{
+    numbers=left,
+    tabsize=2,
+    backgroundcolor=\color{light-gray},
+}
+\title{
+	Prática de Eletrônica Digital 1 - (119466)
+	\singlespacing
+		Turma E (Unb - Gama)
+	\singlespacing
+	\begin{midpage}
+	\begin {large}
+		Pré-Relatório Experimento 5
+		\singlespace
+		Circuitos Multiplexadores e Demultiplexadores
+	\end {large}
+	\end{midpage}
+}
+\date{Setembro 27, 2016}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\begin{document}
+\maketitle	
+%\vspace{100 mm}
+\begin{center}
+
+\begin{tabular}{|c|l|r|}
+\hline
+Nome & Matrícula & Assinatura\\
+\hline
+Arthur Temporim & 140016759 & \\
+\hline	
+Eduardo Nunes & 140056149 & \\
+\hline	
+\end{tabular}
+
+\end{center}
+
+\pagebreak
+
+\section{Projetos e Simulações}
+
+	Na seção a seguir contém as atividades pedidas para a elaboração do pré-relatório.
+	
+\subsection{Projeto1 - Decodificador com Mux}
+\subsubsection{Diagrama Esquemático}
+
+\textbf{Diagrama Projeto1 - Decodificador:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.7	]{imagens/esquematico_projeto1}
+  \caption{Diagrama 1 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\subsubsection{Código VHDL}
+
+\lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}
+
+\newpage
+\iffalse
+\subsection{Projeto2 - Multiplexar display}
+\subsubsection{Diagrama Esquemático}
+
+\textbf{Diagrama Projeto1 - Multiplexador:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.7	]{imagens/esquematico_projeto2}
+  \caption{Diagrama 1 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\newpage
+\subsubsection{Código VHDL}
+
+\lstinputlisting[language=vhdl]{projetos/projeto2/projeto2.vhd}
+\fi
+
+\end{document}
