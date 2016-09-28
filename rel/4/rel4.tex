@@ -69,22 +69,27 @@ Eduardo Nunes & 14/0056189 & \\
 Introdução, indicando a delimitação do tema, apresentando a justificativa descrevendo o propósito do relatório.
 \fi
 
-	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento os mapas de Karnaugh, o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta \textit{Ise design suite}.
+	 Neste relatorio e apresentado o resultado do experimento realizado na aula da prática da eletrônica digital 1. São apresentados os mapas de Karnaugh, o código vhdl e a saída em forma de onda. Para este experimento foi utilizado a ferramenta \textit{Ise design suite}.
 
 \section{Experimentos}
 \iffalse
 Parte Experimental, descrevendo os passos realizados, dificuldades e soluções para os problemas encontrados. Aqui, deve-se apresentar uma descrição dos resultados encontrados em forma de figuras, gráficos e tabelas.
 \fi
 
-\textbf{Experimento 01}
+\subsection{Experimento 01}
 \singlespacing
 
-	O primeiro experimento tratou-se da realização do mapa de Karnaugh com a mesma tabela do pré relatório quatro. Porém, foi solicitado que despresassemos os hexadecimais, ou seja, que utilizassemos apenas os dez primeiros valores da tabela. Abaixo as imagens, respectivamente, são: Mapas de Karnaugh, Código vhdl e a saída obtida em forma de onda.
+	O primeiro experimento tratou-se da implementação de um circuito a partir da tabela verdade. A dupla teve de identificar os mintermos e elaborar mapas de Karnaugh para alcançar as funções lógicas simplificadas.
+	
+	Para a realização do experimento em sala de aula, foi despresado os valores hexadecimais referenstes ao display de 7 segmentos, ou seja, que utilizassemos apenas os dez primeiros valores da tabela que representam os algarismos de 0 à 9. 
+	
+	Segue abaixo, respectivamente: Mapas de Karnaugh, Código vhdl e a saída obtida em forma de onda.
 \singlespacing
 
-	\textbf{Mapas de Karnaugh}
-\center{
-	\begin{table}[h]
+\subsection{Mapas de Karnaugh}
+
+\begin{table}[h]
+\begin{center}
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
@@ -98,13 +103,13 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\textbf{10} & 1 & 1 & X & X\\
 		\hline
 	\end{tabular}
+\end{center}
 	\caption{Mapa de Karnaugh da saida A. Equação: A = C + A + !B!D + BD }
 	\end{table}
 	\singlespacing
-}
 
-\center{
-	\begin{table}[h]
+\begin{table}[h]
+\begin{center}
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
@@ -118,13 +123,14 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\textbf{10} & 1 & 1 & X & X\\
 		\hline
 	\end{tabular}
+\end{center}
 	\caption{Mapa de Karnaugh da saida B. Equação: B = !B + !C!D + CD }
-	\end{table}
-	\singlespacing
-}
+\end{table}
+	
+\singlespacing
 
-\center{
-	\begin{table}[h]
+\begin{table}[h]
+\begin{center}
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
@@ -138,23 +144,23 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\textbf{10} & 1 & 1 & X & X\\
 		\hline
 	\end{tabular}
+\end{center}
 	\caption{Mapa de Karnaugh da saida B. Equação: C = !C + B + D }
 	\end{table}
 	\singlespacing
-}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.6]{imagens/circuito}
-  \caption{Diagrama do circuito xor de 6 entradas - Ise Design Suite 14.7}	
+  \caption{Diagrama do circuito codificador - Ise Design Suite 14.7}	
   \label{figRotulo}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
 
-  \includegraphics[scale=0.4]{imagens/onda}
-  \caption{Diagrama de ondas xor de 6 entradas - Ise Design Suite 14.7}
+  \includegraphics[scale=0.35]{imagens/onda}
+  \caption{Diagrama de ondas do circuito codificador - Ise Design Suite 14.7}
   \label{figRotulo}
 \end{figure}
 \newpage
