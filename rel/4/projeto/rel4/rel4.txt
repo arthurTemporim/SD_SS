@@ -1,0 +1,6 @@
+Neste relatorio ́e apresentado os resultados de um experimento realizado na aula da prática da eletrônica digital 1. São apresentados no experimento o código vhdl e a saıda em forma de onda. Para este experimento foi utilizado a ferramenta Ise design suite.
+
+Experimento 01
+O primeiro experimento tratou-se da realização do mapa de Karnaugh com a mesma tabela do pré relatório quatro. Porém, foi solicitado que despresassemos os hexadecimais, ou seja, que utilizassemos apenas os dez primeiros valores da tabela. Abaixo as imagens, respectivamente, são: Código vhdl e a saída obtida em forma de onda.
+
+Juntamente com os respectivos mapas de Karnaugh 
