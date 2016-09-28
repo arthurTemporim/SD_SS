@@ -3,8 +3,17 @@
 %Centralizar horizontalmente.
 \newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
 \documentclass[12pts]{article}
-\usepackage[utf8]{inputenc} 
-\title{
+\usepackage[utf8]{inputenc}
+%Pacote para colocar cor no código.
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+%Pacote para inserir código.
+\usepackage{listings}
+\lstset{
+    numbers=left,
+    tabsize=2,
+    backgroundcolor=\color{light-gray},
+}\title{
 	Prática de Eletrônica Digital 1 - (119466)
 	\singlespacing
 		Turma E (Unb - Gama)
@@ -83,7 +92,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 	
 	Para a realização do experimento em sala de aula, foi despresado os valores hexadecimais referenstes ao display de 7 segmentos, ou seja, que utilizassemos apenas os dez primeiros valores da tabela que representam os algarismos de 0 à 9. 
 	
-	Segue abaixo, respectivamente: Mapas de Karnaugh, Código vhdl e a saída obtida em forma de onda.
+	Segue abaixo, respectivamente: Mapas de Karnaugh, Código vhdl, diagrama esquemático e saída obtida em forma de onda.
 \singlespacing
 
 \subsection{Mapas de Karnaugh}
@@ -135,9 +144,9 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
-		\textbf{00} & 1 & 1 & 1 & 0\\
+		\textbf{00} & 1 & 0 & 1 & 1\\
 		\hline
-		\textbf{01} & 1 & 1 & 1 & 1\\
+		\textbf{01} & 0 & 1 & 0 & 1\\
 		\hline
 		\textbf{11} & X & X & X & X\\
 		\hline
@@ -145,10 +154,96 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 	\end{tabular}
 \end{center}
-	\caption{Mapa de Karnaugh da saida B. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida C. Equação: C = !C + B + D }
+	\end{table}
+	\singlespacing
+	
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 1 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+\end{center}
+	\caption{Mapa de Karnaugh da saida D. Equação: C = !C + B + D }
+	\end{table}
+	\singlespacing
+	
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 1 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+\end{center}
+	\caption{Mapa de Karnaugh da saida E. Equação: C = !C + B + D }
 	\end{table}
 	\singlespacing
 
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 1 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+\end{center}
+	\caption{Mapa de Karnaugh da saida F. Equação: C = !C + B + D }
+	\end{table}
+	\singlespacing
+	
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
+		\hline
+		\textbf{00} & 1 & 0 & 1 & 1\\
+		\hline
+		\textbf{01} & 0 & 1 & 0 & 1\\
+		\hline
+		\textbf{11} & X & X & X & X\\
+		\hline
+		\textbf{10} & 1 & 1 & X & X\\
+		\hline
+	\end{tabular}
+\end{center}
+	\caption{Mapa de Karnaugh da saida G. Equação: C = !C + B + D }
+	\end{table}
+	\singlespacing
+
+\clearpage
+\subsection{Código VHDL}
+\lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}
+
+\clearpage
+\subsection{Diagrama Esquemático}
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.6]{imagens/circuito}
@@ -156,9 +251,11 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
   \label{figRotulo}
 \end{figure}
 
+\newpage
+\subsection{Diagrama de Onda}
+
 \begin{figure}[!htb]
   \centering
-
   \includegraphics[scale=0.35]{imagens/onda}
   \caption{Diagrama de ondas do circuito codificador - Ise Design Suite 14.7}
   \label{figRotulo}
@@ -170,14 +267,16 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 Discussão sobre os resultados encontrados, comentando detalhadamente as medições realizadas e dando a devida interpretação destas, informando se os objetivos da experimento foram alcançados. Esta é uma das partes mais importantes do relatório: aqui, há oportunidade para expressar os conhecimentos adquiridos na prática e fazer a interrelação com os fundamentos teóricos.
 \fi
 
-Com a realização deste experimento foi possível adquirir conhecimento a respeito do mapa de Karnaugh. Todas os resultados apresentados nas saídas do experimento foi de acordo com o esperado.
+	Com a realização deste experimento foi possível adquirir conhecimento a respeito do mapa de Karnaugh. Também foi possível entender que a \textit{concepção} de um circuito de forma manual e implementação em código VHDL pode ser bem distinta, porém o objetivo alcançado é o mesmo. Na realização do experimento foram simplificadas todas as funções lógicas, porém a implementação no vhdl foi feita com estruturas condicionais.
+
+	Todas os resultados apresentados nas saídas do experimento foram de acordo com o esperado.
 
 \section{Conclusões}
 \iffalse
 Conclusões, mostrando os êxitos e eventuais problemas encontrados na realização do experimento, indicando as limitações, apresentando recomendações e/ou sugestões.
 \fi
 
-Neste quarto relatório foi possível realizar o experimento com êxito porém houve dificuldade na criação do código em vhdl na qual a dupla tentou experimentar uma outra forma de fazer o código porém não obteve exito tendo se que adotar a mesma forma na qual foi feito o pré relatório. Desta forma, foi obtido os resultados esperados.
+	Neste quarto relatório foi possível realizar o experimento com êxito. A compreensão da necessidade de simplificação de funções lógicas pode ser alcançada juntamente com o aprendizado de novas formas de implementação de circuitos em VHDL.
 
 
 
