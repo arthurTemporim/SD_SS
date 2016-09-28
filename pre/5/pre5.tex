@@ -73,24 +73,50 @@ Eduardo Nunes & 140056149 & \\
 
 \lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}
 
-\newpage
-\iffalse
+\clearpage
+
 \subsection{Projeto2 - Multiplexar display}
+
+	Este projeto consiste na utilização de 2 displays de 7 segmentos utilizando apenas 1 multiplexador e 1 decodificador BCD, também foram permitidos o gerador de função para gerar o \textit{clock} e o seletor de dispositivo.
+	
+	Toda a implementação do circuito abaixo foi feita diretamente em VHDL, os esquemáticos gerados foram feitos a partir da ferramenta. Porém a compreensão do circuito foi fornecida através do diagragam de blocos (figura 5.6) do roteiro experimental.
+	
+	Devido à esta abstração, não foi necessário a construção do circuito em forma de esquemático.
+
 \subsubsection{Diagrama Esquemático}
 
-\textbf{Diagrama Projeto1 - Multiplexador:}
+\textbf{Diagrama Projeto2 - Multiplexador:}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.7	]{imagens/esquematico_projeto2macro}
+  \caption{Esquematico macro do projeto 2 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
+
+\clearpage
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.7	]{imagens/esquematico_projeto2}
-  \caption{Diagrama 1 - Ise Design Suit 14.7}
+  \caption{Esquematico geral do projeto 2 - Ise Design Suit 14.7}
   \label{figRotulo}
 \end{figure}
 
-\newpage
+
+\clearpage
 \subsubsection{Código VHDL}
 
 \lstinputlisting[language=vhdl]{projetos/projeto2/projeto2.vhd}
-\fi
+
+\clearpage
+\subsubsection{Testes do projeto}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.35	]{imagens/onda_projeto2}
+  \caption{Forma de onda do projeto 2 - Ise Design Suit 14.7}
+  \label{figRotulo}
+\end{figure}
 
 \end{document}
