@@ -1,0 +1,48 @@
+A) As formas de alimentação suportadas pela placa, os níveis de tensão e corrente envolvidos e como esta configuração é feita:
+
+Formas de alimentação: A placa Basys3 pode receber energia da porta Digilent USB-JTAG(J4) ou a partir de uma fonte de alimentação externa 5V.
+
+Níveis de tensão: É necessário limitar a tensão máxima da bateria externa a 5.5V DC. A tensão mínima da bateria depende da aplicação; se a função de host USB (J2) estiver sendo utilizada, pelo menos,
+4.6V deve ser fornecida. Em outros casos, a voltagem mínima é de 3.6V.
+
+Corrente envolvidas: É necessário 3.3, 1.8V e suprimentos de 1.0V a partir da entrada 5V de alimentação principal.
+
+Para configurar o FPGA, há três maneiras.
+
+1. O PC pode usar o circuito Digilent USB-JTAG (portJ4, identificado como "PROG") para programar o FPGA para que a qualquer momento o aparelho esteja ligado.
+2. Um ficheiro armazenado no de série (SPI) dispositivo flash não volátil pode ser transferido para o FPGA usando a porta SPI.
+3. Um arquivo de programação podem ser transferidos a partir de um cartão de memória USB ligado ao HID USB port.
+
+B) As formas de programação suportadas pela placa e como elas podem ser configuradas:
+	Você pode programar o FPGA a partir de um pen drive conectado à porta USB-HID (J2). Ou através da programação JTAG pode ser feito usando o servidor de hardware em Vivado. Ou com um circuito que pode programar dispositivos flash.
+
+C) As formas de armazenamento do bitstream na placa (tipos de memória):
+	A placa Basys3 contém um dispositivo serial flash 32Mbit não-volátil, que está ligado ao FPGA Artix 7 usando um quad-modo dedicado (x4) barramento SPI.
+
+
+D) A quantidade e frequência dos clocks disponíveis:
+A placa Basys3 inclui um único oscilador de 100MHz conectada ao pino W5 (W5 é uma entrada no banco de MRCC 34).
+
+E) A identificação (nome) dos pinos usados para as entradas da placa (chaves e pushbuttons) e para as saídas (LEDs e displays de 7-segmentos):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
