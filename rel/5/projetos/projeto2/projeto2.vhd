@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity projeto2 is
 	port (
 		a : in std_logic := '0';
-		b : in std_logic := '0';
+		b : in std_logic := '1';
 		c : in std_logic := '0';
 		s : out std_logic
 	);
@@ -35,8 +35,7 @@ begin
 	else
 		demultiplex(1) <= out_multiplex;
 	end if;
-end process;
-
 	s <= demultiplex(0) or demultiplex(1);
+end process;
 
 end Behavioral;
