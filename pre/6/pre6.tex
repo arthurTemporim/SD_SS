@@ -94,68 +94,28 @@ A placa Basys3 inclui um único oscilador de 100MHz conectada ao pino W5 (W5 é 
 
 \section{Projetos e simulações}
 
-\iffalse	
-\subsection{Projeto1 - Decodificador com Mux}
-\subsubsection{Diagrama Esquemático}
+\subsection{Projeto 1}
 
-\textbf{Diagrama Projeto1 - Decodificador:}
+Este circuito consiste na simples exibição em LEDs de acordo com os valores de entrada nos \textit{switchs} de uma placa FPGA.
+
+\subsubsection{Diagrama Esquemático}
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.3	]{imagens/esquematico_projeto1}
+  \includegraphics[scale=0.3	]{imagens/esquematico1}
   \caption{Diagrama 1 - Ise Design Suit 14.7}
   \label{figRotulo}
 \end{figure}
 
-\newpage
 \subsubsection{Código VHDL}
+%\lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}
 
-\lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}
+\pagebreak
 
-\clearpage
+\subsection{Projeto 2}
 
-\subsection{Projeto2 - Multiplexar display}
+Este circuito consiste em mostra os valores de 2 números de 4 bits cada em 2 displays de BCD utilizando multiplexadores e clocks para representar o resultado.
 
-	Este projeto consiste na utilização de 2 displays de 7 segmentos utilizando apenas 1 multiplexador e 1 decodificador BCD, também foram permitidos o gerador de função para gerar o \textit{clock} e o seletor de dispositivo.
-	
-	Toda a implementação do circuito abaixo foi feita diretamente em VHDL, os esquemáticos gerados foram feitos a partir da ferramenta. Porém a compreensão do circuito foi fornecida através do diagragam de blocos (figura 5.6) do roteiro experimental.
-	
-	Devido à esta abstração, não foi necessário a construção do circuito em forma de esquemático.
-
-\subsubsection{Diagrama Esquemático}
-
-\textbf{Diagrama Projeto2 - Multiplexador:}
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.7	]{imagens/esquematico_projeto2macro}
-  \caption{Esquematico macro do projeto 2 - Ise Design Suit 14.7}
-  \label{figRotulo}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.7	]{imagens/esquematico_projeto2}
-  \caption{Esquematico geral do projeto 2 - Ise Design Suit 14.7}
-  \label{figRotulo}
-\end{figure}
-
-
-\clearpage
 \subsubsection{Código VHDL}
-
 \lstinputlisting[language=vhdl]{projetos/projeto2/projeto2.vhd}
-
-\clearpage
-\subsubsection{Testes do projeto}
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.35	]{imagens/onda_projeto2}
-  \caption{Forma de onda do projeto 2 - Ise Design Suit 14.7}
-  \label{figRotulo}
-\end{figure}
-\fi
 \end{document}
