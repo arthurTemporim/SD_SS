@@ -100,7 +100,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{imagens/circuito1}
-  \caption{Diagrama do circuito codificador - Ise Design Suite 14.7}	
+  \caption{Esquemático projeto 1- Ise Design Suite 14.7}	
   \label{figRotulo}
 \end{figure}
 
@@ -110,7 +110,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.35]{imagens/onda1}
-  \caption{Diagrama de ondas do circuito codificador - Ise Design Suite 14.7}
+  \caption{Diagrama de ondas projeto 1- Ise Design Suite 14.7}
   \label{figRotulo}
 \end{figure}
 \newpage
@@ -123,13 +123,32 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 \lstinputlisting[language=vhdl]{projetos/projeto2/projeto2.vhd}
 
 \clearpage
-\subsection{Diagrama Esquemático}
+\subsection{Diagrama Esquemático versão 1}
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{imagens/esquematico2}
-  \caption{Diagrama do circuito codificador - Ise Design Suite 14.7}	
+  \caption{Esquemático projeto 2 V1 - Ise Design Suite 14.7}	
   \label{figRotulo}
 \end{figure}
+
+\newpage
+\subsection{Diagrama Esquemático versão 2}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.45]{imagens/esquematico22}
+  \caption{Esquemático projeto 2 V2 - Ise Design Suite 14.7}	
+  \label{figRotulo}
+\end{figure}
+
+\subsection{Diagrama de Onda}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.35]{imagens/onda2}
+  \caption{Diagrama de ondas Projeto 2 V2 - Ise Design Suite 14.7}
+  \label{figRotulo}
+\end{figure}
+\newpage
 
 
 \section{Discussão}
@@ -137,7 +156,9 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 Discussão sobre os resultados encontrados, comentando detalhadamente as medições realizadas e dando a devida interpretação destas, informando se os objetivos da experimento foram alcançados. Esta é uma das partes mais importantes do relatório: aqui, há oportunidade para expressar os conhecimentos adquiridos na prática e fazer a interrelação com os fundamentos teóricos.
 \fi
 
-        Neste quinto relatório foi possível realizar o primeiro experimento com êxito. Porém, em relação ao segundo experimento tivemos dificuldade na implementação do circuito pois o código em VHDL não correspondia ao resultado esperado quando verificado o diagrama em forma de onda.
+        Neste quinto relatório foi possível realizar o primeiro experimento com êxito. Porém, em relação ao segundo experimento tivemos dificuldade na implementação do circuito pois o código em VHDL não correspondia ao resultado esperado quando verificado o diagrama em forma de onda. Para solucionar foi utilizado mais um \textit{signal} e as atribuições para a saida foram feitas fora do \textit{process}.
+        
+        A solução que alcançou o resultado esperado é a referente à \textbf{versão 2}. Pode-se observar que a implementação do circuito é abstraída para um multiplexador após a implementação do circuito.
 
 \section{Conclusões}
 \iffalse

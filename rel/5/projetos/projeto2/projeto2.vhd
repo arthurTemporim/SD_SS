@@ -14,7 +14,7 @@ architecture Behavioral of projeto2 is
 
 signal multiplex   	: std_logic;
 signal out_multiplex	: std_logic;
-signal demultiplex 	: std_logic_vector (1 downto 0);
+signal demultiplex 	: std_logic;
 
 begin
 
@@ -31,11 +31,12 @@ end process;
 process (out_multiplex, a, b, c)
 begin
 	if (a = '0') then
-		demultiplex(0) <= out_multiplex;
+		demultiplex <= out_multiplex;
 	else
-		demultiplex(1) <= out_multiplex;
+		demultiplex <= out_multiplex;
 	end if;
-	s <= demultiplex(0) or demultiplex(1);
 end process;
+
+s <= demultiplex;
 
 end Behavioral;
