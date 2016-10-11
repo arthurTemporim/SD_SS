@@ -5,6 +5,7 @@ entity projeto2 is
 	port (
 		a   : in  std_logic_vector (3 downto 0) := "0001";		-- Entrada A.
 		b   : in  std_logic_vector (3 downto 0) := "0000";		-- Entrada B.
+		sel : in  std_logic							 := '0';			-- Seletora de displays.
 		clk : in  std_logic							 := '0';			-- Clock.
 		display1 : out  std_logic_vector (6 downto 0);
 		display2 : out  std_logic_vector (6 downto 0)
@@ -68,18 +69,19 @@ end process;
 
 
 -- Mux 1->2.
-process (bcd, clk)
+process (bcd, clk, sel)
 begin
-	if (clk = '0') then
-		display1 <= bcd;
+	if (clk = '0' and sel = '0') then 	 -- Se sel = 0 então mostra B.
+		display2 <= bcd; 					 	 -- Mostra B no display.
+		display1 <= "00000000";			 	 -- Desliga A.
+	elsif (clk = '1' and sel = '1') then -- Se sel = 1 então mostra A.
+		display1 <= bcd;					 	 -- Mostra A no display.
+		display2 <= "00000000";			  	 -- Desliga B.
 	else
-		display2 <= bcd;
+	-- Caso inesperado.
+		display1 <= "00000000";			  	 -- Desliga A.
+		display2 <= "00000000";			  	 -- Desliga B.
 	end if;
 end process;
 
-
-<<<<<<< HEAD
 end Behavioral;
-=======
-end Behavioral;
->>>>>>> develop

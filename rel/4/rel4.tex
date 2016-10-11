@@ -144,9 +144,9 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
-		\textbf{00} & 1 & 0 & 1 & 1\\
+		\textbf{00} & 1 & 1 & 1 & 0\\
 		\hline
-		\textbf{01} & 0 & 1 & 0 & 1\\
+		\textbf{01} & 1 & 1 & 1 & 1\\
 		\hline
 		\textbf{11} & X & X & X & X\\
 		\hline
@@ -174,7 +174,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 	\end{tabular}
 \end{center}
-	\caption{Mapa de Karnaugh da saida D. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida D. Equação: D = A +B!CD + C!A!B + !B + !D }
 	\end{table}
 	\singlespacing
 	
@@ -184,17 +184,17 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
-		\textbf{00} & 1 & 0 & 1 & 1\\
+		\textbf{00} & 1 & 0 & 0 & 1\\
 		\hline
-		\textbf{01} & 0 & 1 & 0 & 1\\
+		\textbf{01} & 0 & 0 & 0 & 1\\
 		\hline
 		\textbf{11} & X & X & X & X\\
 		\hline
-		\textbf{10} & 1 & 1 & X & X\\
+		\textbf{10} & 1 & 0 & X & X\\
 		\hline
 	\end{tabular}
 \end{center}
-	\caption{Mapa de Karnaugh da saida E. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida E. Equação: E = !D!B + C!D }
 	\end{table}
 	\singlespacing
 
@@ -204,9 +204,9 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
-		\textbf{00} & 1 & 0 & 1 & 1\\
+		\textbf{00} & 1 & 0 & 0 &0\\
 		\hline
-		\textbf{01} & 0 & 1 & 0 & 1\\
+		\textbf{01} & 1 & 1 & 0 & 1\\
 		\hline
 		\textbf{11} & X & X & X & X\\
 		\hline
@@ -214,7 +214,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 	\end{tabular}
 \end{center}
-	\caption{Mapa de Karnaugh da saida F. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida F. Equação: F = A + B!C + !C!D + B!D }
 	\end{table}
 	\singlespacing
 	
@@ -224,9 +224,9 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 		\textbf{AB/CD} & \textbf{00} & \textbf{01} & \textbf{11} & \textbf{10}\\
 		\hline
-		\textbf{00} & 1 & 0 & 1 & 1\\
+		\textbf{00} & 0 & 0 & 1 & 1\\
 		\hline
-		\textbf{01} & 0 & 1 & 0 & 1\\
+		\textbf{01} & 0 & 0 & 0 & 1\\
 		\hline
 		\textbf{11} & X & X & X & X\\
 		\hline
@@ -234,7 +234,7 @@ Parte Experimental, descrevendo os passos realizados, dificuldades e soluções 
 		\hline
 	\end{tabular}
 \end{center}
-	\caption{Mapa de Karnaugh da saida G. Equação: C = !C + B + D }
+	\caption{Mapa de Karnaugh da saida G. Equação: G = A + C(B + !D) }
 	\end{table}
 	\singlespacing
 
