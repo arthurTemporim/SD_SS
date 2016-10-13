@@ -77,9 +77,4 @@ begin
 	end if;
 end process;
 
-
-<<<<<<< HEAD
 end Behavioral;
-=======
-end Behavioral;
->>>>>>> develop
