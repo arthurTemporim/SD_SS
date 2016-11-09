@@ -33,7 +33,7 @@ begin
 						auxEntrada <= "000";
 					end if;
 				end if;
+				saida <= auxEntrada;
 			end if;			
-			saida <= auxEntrada;
 	end process;		
 end Behavioral;

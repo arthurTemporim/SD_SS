@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/arthur/Documents/SD_SS/pre/7/projetos/projeto1/projeto_2_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="projeto_2" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/projeto_2/entrada" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">entrada[2:0]</obj_property>
+      <obj_property name="ObjectShortName">entrada[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/projeto_2/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/projeto_2/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/projeto_2/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/projeto_2/saida" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">saida[2:0]</obj_property>
+      <obj_property name="ObjectShortName">saida[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/projeto_2/auxentrada" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">auxentrada[2:0]</obj_property>
+      <obj_property name="ObjectShortName">auxentrada[2:0]</obj_property>
+   </wvobject>
+</wave_config>
