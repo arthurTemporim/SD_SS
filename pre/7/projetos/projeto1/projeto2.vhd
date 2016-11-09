@@ -1,9 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+library adk;
+use adk.all;
+
 entity projeto2 is
 	port(
-		clock : in std_logic;
+		clk : in std_logic;
 		a : in std_logic := '0';
 		b : in std_logic := '0';
 		c : in std_logic := '0';
@@ -32,10 +35,19 @@ component flip_flop_jk
 end component;
 
 begin
-	f1 : flip_flop_jk port map (inA,inA,clear,'1', clock);
-	f2 : flip_flop_jk port map (outA,outA,clear,'1', clock);
-	f3 : flip_flop_jk port map (outB,outB,clear,'1', clock);
-
-
+	process (a,b,c,inA,clear,outA,outB,outC,clk)
+		begin
+		inA <= ((not outC) and outB);
+		--f1 : flip_flop_jk port map (
+		--	j=>inA,
+		--	k=>inA,
+		--	Reset=>clear,
+		--	Clock_enable=>'1',
+		--	Clock=>clk,
+		--	Output=>outA);
+		--f1 : flip_flop_jk port map (inA,inA,clear,'1', clock, Output => outA);
+		--f2 : flip_flop_jk port map (outA,outA,clear,'1', clock, outB);
+		--f3 : flip_flop_jk port map (outB,outB,clear,'1', clock, outC);
+	end process;
 end Behavioral;
 
