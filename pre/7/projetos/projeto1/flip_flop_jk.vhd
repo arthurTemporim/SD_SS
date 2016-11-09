@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 
 entity flip_flop_jk is
-   port( J,K: in  std_logic;
-         Reset: in std_logic;
-         Clock_enable: in std_logic;
+   port( J,K: in  std_logic := '1';
+         Reset: in std_logic := '0';
+         Clock_enable: in std_logic := '1';
          Clock: in std_logic;
          Output: out std_logic);
 end flip_flop_jk;
