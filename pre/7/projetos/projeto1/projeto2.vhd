@@ -30,33 +30,103 @@ component flip_flop_jk
 end component;
 
 -- DISPLAY
+COMPONENT display
+    PORT(
+         a : IN  std_logic_vector(3 downto 0);
+         clk : IN  std_logic;
+         display1 : OUT  std_logic_vector(6 downto 0)
+        );
+END COMPONENT;
 
---###################################################--
 -- SINAIS
+--###################################################--
 signal inA : std_logic := '0';
-
+signal Clock : std_logic := '0';
 -- FLIP-FLOPs
 -- SINAIS GENERICOS DOS FFs
-   signal Reset : std_logic := '0';
+   signal Reset : std_logic := '0'; -- Funciona como Clear.
    signal Clock_enable : std_logic := '1';
-   signal Clock : std_logic := '0';
 
---FF1
+
+--FFa
    --Inputs
    signal Ja : std_logic := '0';
    signal Ka : std_logic := '0';
  	--Outputs
    signal OutA : std_logic;
+--FFb
+   --Inputs
+   signal Jb : std_logic := '0';
+   signal Kb : std_logic := '0';
+ 	--Outputs
+   signal OutB : std_logic;
+--FFc
+   --Inputs
+   signal Jc : std_logic := '0';
+   signal Kc : std_logic := '0';
+ 	--Outputs
+   signal OutC : std_logic;
+	
+--DISPLAYs
+   --Inputs
+   signal inDisplay1 : std_logic_vector(3 downto 0) := (others => '0');
+ 	--Outputs
+   signal outDisplay1 : std_logic_vector(6 downto 0);	
 --###################################################--
 
 begin
-	f1: flip_flop_jk PORT MAP (
+
+-- Inicializa componentes
+--###################################################--
+--FFs
+	fa: flip_flop_jk PORT MAP (
 		J => Ja,
 		K => Ka,
 		Reset => Reset,
 		Clock_enable => Clock_enable,
 		Clock => Clock,
-		Output => OutA
+		Output => outA
 	);
-end Behavioral;
+	fb: flip_flop_jk PORT MAP (
+		J => Jb,
+		K => Kb,
+		Reset => Reset,
+		Clock_enable => Clock_enable,
+		Clock => Clock,
+		Output => outB
+	);
+	fc: flip_flop_jk PORT MAP (
+		J => Jc,
+		K => Kc,
+		Reset => Reset,
+		Clock_enable => Clock_enable,
+		Clock => Clock,
+		Output => outC
+	);
+	
+-- DISPLAYs
+   display1: display PORT MAP (
+      a => inDisplay1,
+      clk => Clock,
+		display1 => outDisplay1
+   );
 
+--###################################################--
+clock <= clk;
+	process(Ja,Ka,Jb,Kb,Jc,Kc,Reset,outA,outB,outC,clk)
+	begin
+		Ja <= ((not outC) and outB);
+		Ka <= Ja;
+		Jb <= Ka;
+		Kb <= Jb;
+		Jc <= Kb;
+		Kc <= Jc;
+		inDisplay1(3) <= '0';
+		inDisplay1(2) <= OutC;
+		inDisplay1(1) <= OutB;
+		inDisplay1(0) <= OutA;
+	end process;
+	sa <= outA;
+	sb <= outB;
+	sc <= outC;
+end Behavioral;
