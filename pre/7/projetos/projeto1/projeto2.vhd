@@ -17,37 +17,46 @@ entity projeto2 is
 end projeto2;
 
 architecture Behavioral of projeto2 is
-
--- SIGNALS
-signal clear : std_logic;
-signal inA : std_logic;
-signal outA : std_logic;
-signal outB : std_logic;
-signal outC : std_logic;
-
+--###################################################--
 -- COMPONENTS
+-- FLIP-FLOP
 component flip_flop_jk
-   port( J,K: in  std_logic;
+   port( J: in  std_logic;
+			K: in  std_logic;
          Reset: in std_logic;
          Clock_enable: in std_logic;
          Clock: in std_logic;
          Output: out std_logic);
 end component;
 
+-- DISPLAY
+
+--###################################################--
+-- SINAIS
+signal inA : std_logic := '0';
+
+-- FLIP-FLOPs
+-- SINAIS GENERICOS DOS FFs
+   signal Reset : std_logic := '0';
+   signal Clock_enable : std_logic := '1';
+   signal Clock : std_logic := '0';
+
+--FF1
+   --Inputs
+   signal Ja : std_logic := '0';
+   signal Ka : std_logic := '0';
+ 	--Outputs
+   signal OutA : std_logic;
+--###################################################--
+
 begin
-	process (a,b,c,inA,clear,outA,outB,outC,clk)
-		begin
-		inA <= ((not outC) and outB);
-		--f1 : flip_flop_jk port map (
-		--	j=>inA,
-		--	k=>inA,
-		--	Reset=>clear,
-		--	Clock_enable=>'1',
-		--	Clock=>clk,
-		--	Output=>outA);
-		--f1 : flip_flop_jk port map (inA,inA,clear,'1', clock, Output => outA);
-		--f2 : flip_flop_jk port map (outA,outA,clear,'1', clock, outB);
-		--f3 : flip_flop_jk port map (outB,outB,clear,'1', clock, outC);
-	end process;
+	f1: flip_flop_jk PORT MAP (
+		J => Ja,
+		K => Ka,
+		Reset => Reset,
+		Clock_enable => Clock_enable,
+		Clock => Clock,
+		Output => OutA
+	);
 end Behavioral;
 
