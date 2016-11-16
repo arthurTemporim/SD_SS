@@ -101,12 +101,33 @@ Imagem utilizada na questão 01: slideplayer.com.br/slide/364035/
 
 \subsection{Projeto 1}
 
+Este projeto consiste em um contador sincrono com um \textit{reset} assincrono. Ele conta de 0 a 9 de forma crescente e decrescente de acordo com o valor da entrada "direcao".
 
 \subsubsection{Código VHDL}
-\pagebreak
+\lstinputlisting[language=vhdl]{projetos/projeto1/projeto1.vhd}                                                                                                                                     
 
+\subsubsection{Diagrama de Ondas}
+	\begin{figure}[!htb]
+	  \centering
+	  \includegraphics[scale=0.38]{imagens/onda_projeto_1.png}
+	  \caption{Diagrama de ondas 1 - ISE Design Suit 14.7}
+	  \label{figRotulo}
+	\end{figure}
+
+\pagebreak
 \subsection{Projeto 2}
 
+Este projeto consiste em um contador sincrono com um \textit{reset} assincrono. Ele conta na sequência: \textbf{0,2,5,6}. É possível também inserir outros valores no intervalo de 0 a 6, caso o valor não esteja na contagem, o circuito automáticamente volta para o estado "0". 
+
+Diferente do projeto anterior, este circuito foi programado na forma de máquina de estados.
 
 \subsubsection{Código VHDL}
+\lstinputlisting[language=vhdl]{projetos/projeto1/projeto_2.vhd}                                                                                                                                     
+\subsubsection{Diagrama de Ondas}
+	\begin{figure}[!htb]
+	  \centering
+	  \includegraphics[scale=0.38]{imagens/onda_projeto_2.png}
+	  \caption{Diagrama de ondas 2 - ISE Design Suit 14.7}
+	  \label{figRotulo}
+	\end{figure}
 \end{document}

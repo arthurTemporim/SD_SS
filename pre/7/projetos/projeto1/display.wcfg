@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/arthur/Documents/SD_SS/pre/7/projetos/projeto1/display_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="display" />
+            <top_module name="std_logic_1164" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/display/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/display/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/display/display1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">display1[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/display/bcd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bcd[6:0]</obj_property>
+      <obj_property name="ObjectShortName">bcd[6:0]</obj_property>
+   </wvobject>
+</wave_config>
