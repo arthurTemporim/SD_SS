@@ -40,7 +40,6 @@ END COMPONENT;
 
 -- SINAIS
 --###################################################--
-signal inA : std_logic := '0';
 signal Clock : std_logic := '0';
 -- FLIP-FLOPs
 -- SINAIS GENERICOS DOS FFs
@@ -50,20 +49,20 @@ signal Clock : std_logic := '0';
 
 --FFa
    --Inputs
-   signal Ja : std_logic := '0';
-   signal Ka : std_logic := '0';
+   signal Ja : std_logic := '1';
+   signal Ka : std_logic := '1';
  	--Outputs
    signal OutA : std_logic;
 --FFb
    --Inputs
-   signal Jb : std_logic := '0';
-   signal Kb : std_logic := '0';
+   signal Jb : std_logic := '1';
+   signal Kb : std_logic := '1';
  	--Outputs
    signal OutB : std_logic;
 --FFc
    --Inputs
-   signal Jc : std_logic := '0';
-   signal Kc : std_logic := '0';
+   signal Jc : std_logic := '1';
+   signal Kc : std_logic := '1';
  	--Outputs
    signal OutC : std_logic;
 	
@@ -113,19 +112,19 @@ begin
 
 --###################################################--
 clock <= clk;
-	process(Ja,Ka,Jb,Kb,Jc,Kc,Reset,outA,outB,outC,clk)
-	begin
-		Ja <= ((not outC) and outB);
-		Ka <= Ja;
-		Jb <= Ka;
-		Kb <= Jb;
-		Jc <= Kb;
-		Kc <= Jc;
+--	process(Ja,Ka,Jb,Kb,Jc,Kc,Reset,outA,outB,outC,clk)
+--	begin
+		Ja <= '1';
+		Ka <= '1';
+		Jb <= outA;
+		Kb <= outA;
+		Jc <= (outA and outB);
+		Kc <= (outA and outB);
 		inDisplay1(3) <= '0';
 		inDisplay1(2) <= OutC;
 		inDisplay1(1) <= OutB;
 		inDisplay1(0) <= OutA;
-	end process;
+--	end process;
 	sa <= outA;
 	sb <= outB;
 	sc <= outC;
