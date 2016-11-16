@@ -1,0 +1,162 @@
+%Centralizar verticalmente.
+\newenvironment{midpage}{\vspace*{\fill}}{\vspace*{\fill}}
+%Centralizar horizontalmente.
+\newenvironment{midline}{\hspace*{\fill}}{\hspace*{\fill}}
+\documentclass[12pts]{article}
+\usepackage[utf8]{inputenc}
+%Pacote para colocar cor no código.
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+%Pacote para inserir código.
+\usepackage{listings}
+\lstset{
+    numbers=left,
+    tabsize=2,
+    backgroundcolor=\color{light-gray},
+}\title{
+	Prática de Eletrônica Digital 1 - (119466)
+	\singlespacing
+		Turma E (Unb - Gama)
+	\singlespacing
+	\begin{midpage}
+	\begin {large}
+		Relatório Experimento 7
+		\singlespace
+		Circuitos contadores Síncronos e Assíncronos
+	\end {large}
+	\end{midpage}
+}
+\date{Novembro 13, 2016}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\begin{document}
+\maketitle	
+%\vspace{100 mm}
+\begin{center}
+
+\begin{tabular}{|c|l|r|}
+\hline
+Nome & Matrícula & Assinatura\\
+\hline
+
+Arthur Temporim & 14/0016759 & \\
+\hline	
+Eduardo Nunes & 14/0056189 & \\
+
+\hline	
+\end{tabular}
+
+\end{center}
+
+
+\newpage
+
+\section{Sumário}
+
+\begin{itemize}
+	\item Introdução
+	\singlespacing
+	\item Experimentos
+	\singlespacing
+	\item Discussão
+	\singlespacing
+	\item Conclusões 
+	\singlespacing
+	\item Referências Bibliograficas
+	\singlespacing
+	%\item Diagramas esquemáticos
+\end{itemize}
+
+\newpage
+
+
+\section{Introdução}
+\iffalse
+Introdução, indicando a delimitação do tema, apresentando a justificativa descrevendo o propósito do relatório.
+\fi
+
+\section{Experimentos}
+\iffalse
+Parte Experimental, descrevendo os passos realizados, dificuldades e soluções para os problemas encontrados. Aqui, deve-se apresentar uma descrição dos resultados encontrados em forma de figuras, gráficos e tabelas.
+\fi
+
+	Neste relatório é apresentado os resultados obtidos com o projeto na FPGA realizados na aula prática de eletrônica digital 1. Estes resultados são expostos através de imagens e comentários a respeito do experimento. 
+
+\subsection{Experimento 01 e 02}
+\singlespacing
+	O primeiro experimento, tratou-se de projetar o código em VHDL, feito no pré-relatório 7, na FPGA utilizando o software \textit{Vivado}. Portanto, assim passando para a FPGA o projeto do contador síncrono crescente/decrescente de módulo 10.
+
+	Os primeiros passos seguidos tratou se de configurar o ambiente para identificar no software qual modelo de FPGA utilizaríamos sendo este o: Basys 3. Portanto, senguindo os passos que foram passados em sala, conseguimos criar um novo projeto e fazer as devidas configurações necessárias para que o software reconhece se o modelo da FPGA. Desta vez, o computador reconheceu a FPGA. O que pensávamos que desta vez iríamos obter sucesso, o que não ocorreu. 
+	Após, feitas as configurações necessárias, passamos então para a fase de sintetizar o código, na qual, por conta do baixo processamento do computador demorou um pouco. Mas que no final desta etapa deu certo. A fase que mais deu problema e que não conseguimos resolver foi em relação a geração do bitstream. O computador não estava conseguindo gerar nenhum bitstream. Achavamos que o problema poderia ser o código, apesar do código no pré relatório 7 ter funcionado sem nenhum tipo de problema assim como poderia ser também o arquivo .xdc, porém fizemos testes momentanêos para averiguar estas opções e nestes comprovaram que o problema não era em nenhuma destas opções assim por eliminação julgamos o problema ser na máquina mesmo. A medida que íamos testando e verificando quais poderiam ser os problemas o tempo ia passando e não conseguimos solucionar o problema mesmo contando com a ajuda dos professores e do monitor ali presentes. Como também íamos executando vários passos e exigindo muito processamento do computador este ficava por travar direto o que acabava atrapalhando a execução do projeto.  
+	Como ficamos travados no primeiro experimento sem conguir implementa lo na FPGA, não conseguimos também terminar, por falta de tempo, o experimento 02 que trava se de projetar um contador síncrono usando FFs J-K a qual repetia se a sequência: 000, 010, 101, 110.
+
+\section{Discussão}
+\iffalse
+Discussão sobre os resultados encontrados, comentando detalhadamente as medições realizadas e dando a devida interpretação destas, informando se os objetivos da experimento foram alcançados. Esta é uma das partes mais importantes do relatório: aqui, há oportunidade para expressar os conhecimentos adquiridos na prática e fazer a interrelação com os fundamentos teóricos.
+\fi
+      Neste sétimo relatório não foi possível realizar o experimento com êxito devido aos fatores apresentados acima. Ficamos muito frustrados com este resultado, uma vez que no último experimento já ocorreram imprevistos que impossibilitaram a conclusão com êxito do projeto utilizando a FPGA. Porém ao término da aula, a tarde, nos juntamos para verificar o ocorreu e depois de muita demora por parte do computador o bitstream conseguiu ser gerado mas por a falta da presença de FPGA no momento não conseguimos testar se o projeto estava funcionaria na FPGA. 
+
+\section{Conclusões}
+\iffalse
+Conclusões, mostrando os êxitos e eventuais problemas encontrados na realização do experimento, indicando as limitações, apresentando recomendações e/ou sugestões.
+\fi
+
+Com a realização deste experimento não conseguimos obter resultados positivos. Porém, ganhamos experiência a respeito de imprevistos na execução de projetos e entendemos a parte teórica dos experimentos sendo este mostrado na realização do pré relatório 07. 
+
+\section{Referências Bibliográficas}
+\iffalse
+Referencias Bibliográficas, relacionadas e citadas de acordo com as normas da ABNT.
+\fi
+Prática de Eletrônica Digital I 2016.2 professores Henrique Marra Taira Menegaz,Leonardo Aguayo, Lourdes Mattos Brasil, Marcus Vinícius Chaffim Costa, Mariana Costa Bernardes Matias. UnB - FGA Agosto de 2015.
+
+\iffalse
+\section{Diagramas Esquemáticos}
+Diagramas Esquemáticos. Todos os diagramas devem ser inseridos ao final do relatório em páginas separadas do texto, indicando a identificação do circuito, autor, revisor, versão e datas relevantes.
+\fi
+\newpage
+
+\end{document}
+
+%Exemplo de imagem
+\iffalse
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.3	]{nome_da_imagem}
+  \caption{Descrição}
+  \label{figRotulo}
+\end{figure}
+\fi
+
+% Exemplo de tabela.
+\iffalse
+\begin{tabular}{|c|r|}
+\hline
+Material Utilizado & Quantidade\\
+\hline
+Cabo Banana-Banana & 2  \\
+\hline
+Fios de cobre & x \\
+\hline
+Cabo coaxial & 3  \\
+\hline
+CI 74HC00   & 1 \\
+\hline
+CI 74LS00   & 1 \\
+\hline
+Protoboard & 2 \\
+\hline
+Fonte de tensão MPL-3305M & 1 \\
+\hline	
+Multímetro Digital  & 1 \\
+\hline
+Gerador de funçoes iCEL modelo GV-2002 & 1 \\
+\hline
+Osciloscopio BK 2530 & 1 \\
+\hline
+\end{tabular}
+\singlespacing
+\fi
+
