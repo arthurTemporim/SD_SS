@@ -1,0 +1,123 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Nov 16 11:44:07 2016
+# Process ID: 11169
+# Current directory: /home/arthur/Documents/SD_SS/rel/final/projetoVivado/projetoVivado.runs/impl_1
+# Command line: vivado -log projeto2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source projeto2.tcl -notrace
+# Log file: /home/arthur/Documents/SD_SS/rel/final/projetoVivado/projetoVivado.runs/impl_1/projeto2.vdi
+# Journal file: /home/arthur/Documents/SD_SS/rel/final/projetoVivado/projetoVivado.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source projeto2.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/arthur/Documents/SD_SS/rel/final/projetoVivado/Basys3_Master.xdc]
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command 'set_property IOSTANDARD LVCMOS33 [get_ports {a[2]};
+set_property PACKAGE_PIN W17 [get_ports {a[3]}];
+set_property IOSTANDARD LVCMOS33 [get_ports {a[3]}];
+#B
+#set_property PACKAGE_PIN W15 [get_ports {b ... (truncated) ' found in constraint file. [/home/arthur/Documents/SD_SS/rel/final/projetoVivado/Basys3_Master.xdc:18]
+Finished Parsing XDC File [/home/arthur/Documents/SD_SS/rel/final/projetoVivado/Basys3_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1226.180 ; gain = 224.656 ; free physical = 94 ; free virtual = 2052
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1254.188 ; gain = 28.008 ; free physical = 109 ; free virtual = 2044
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 192af7c2c
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:01 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 94 ; free virtual = 1687
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant propagation | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:01 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 93 ; free virtual = 1687
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:01 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 93 ; free virtual = 1687
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 4 BUFG optimization | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:01 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 92 ; free virtual = 1687
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 92 ; free virtual = 1687
+Ending Logic Optimization Task | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:01 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 92 ; free virtual = 1687
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 192af7c2c
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.35 . Memory (MB): peak = 1683.617 ; gain = 0.000 ; free physical = 107 ; free virtual = 1682
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 1683.617 ; gain = 457.438 ; free physical = 103 ; free virtual = 1682
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.64 . Memory (MB): peak = 1707.625 ; gain = 0.000 ; free physical = 114 ; free virtual = 1648
+INFO: [Common 17-1381] The checkpoint '/home/arthur/Documents/SD_SS/rel/final/projetoVivado/projetoVivado.runs/impl_1/projeto2_opt.dcp' has been generated.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/arthur/Documents/SD_SS/rel/final/projetoVivado/projetoVivado.runs/impl_1/projeto2_drc_opted.rpt.
+report_drc: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1707.629 ; gain = 0.000 ; free physical = 122 ; free virtual = 1657
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC 23-20] Rule violation (BIVC-1) Bank IO standard Vcc - Conflicting Vcc voltages in bank 14. For example, the following two ports in this bank have conflicting VCCOs:  
+a[2] (LVCMOS18, requiring VCCO=1.800) and a[0] (LVCMOS33, requiring VCCO=3.300)
+INFO: [Vivado_Tcl 4-198] DRC finished with 1 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+35 Infos, 0 Warnings, 1 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 16 11:46:03 2016...
