@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity prova is
 	port(
-		entrada : in std_logic_vector (7 downto 0);
+		entrada : in std_logic_vector (6 downto 0) := "0000000";
 		display : out std_logic_vector (6 downto 0)
 	);
 end prova;
@@ -40,3 +40,4 @@ display <= bcd;
 
 end Behavioral;
 
+	
