@@ -1,21 +1,23 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-use IEEE.NUMERIC_STD.ALL;
+library ieee;  
+use ieee.std_logic_1164.all;  
+use ieee.numeric_std.all;  
 
 entity Main is
-	port (
-		entrada : in std_logic_vector(3 downto 0) := "0001";
-		saida : out std_logic_vector( 3 downto 0)
-	);
+
+  port(DI : in unsigned(7 downto 0);  
+      SEL : in unsigned(1 downto 0);  
+      SO : out unsigned(7 downto 0));
+		
 end Main;
 
 architecture Behavioral of Main is
 
-signal aux : std_logic_vector( 3 downto 0) := "0001";
 begin
-
-aux <= entrada srl 1;
+    with SEL select  
+      SO <= DI when "00",  
+            DI sll 1 when "01",  
+            DI sll 3 when "10",  
+            DI sll 2 when others;  
 	
 end Behavioral;
 
