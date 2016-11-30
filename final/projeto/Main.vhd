@@ -5,14 +5,22 @@ use ieee.numeric_std.all;
 entity Main is
 
 	port(
-		modo : in  std_logic := '0'; -- Gera / Valida. [sel 1]
-		k : in  std_logic_vector (3 downto 0)  := "1000"; -- Seleciona um grupo de até 16 bits. [sel 2~5]
-		s : in  std_logic_vector (3 downto 0)  := "0000"; -- Seleciona um valor.					 [sel 6~9]
-		hab_clk : in  std_logic := '1';	-- Habilitador de clock. [sel 10]
-		but_clk : in  std_logic := '0';	-- Botão pra trabalhar como clock. [sel 11]
-		clk : in  std_logic := '0'; -- Clock do circuito.
-		display : out std_logic_vector (6 to 0); -- Display usado para mostrar estatisticas.
-		leds : out std_logic_vector (15 downto 0)  -- LEDs de saída do circuito.
+ 		-- Gera / Valida. [sel 1]
+		modo : in  std_logic := '0';
+        -- Seleciona um grupo de até 16 bits. [sel 2 - 5]
+		k : in  std_logic_vector (3 downto 0) := "1000";
+		-- Seleciona um valor. [sel 6~9]
+		s : in  std_logic_vector (3 downto 0) := "0000";
+		-- Habilitador de clock. [sel 10] 
+		hab_clk : in  std_logic := '1';
+		-- Botão pra trabalhar como clock. [sel 11]
+		but_clk : in  std_logic := '0';
+		-- Clock do circuito.
+		clk	: in  std_logic := '0';
+		-- Display usado para mostrar estatisticas.
+		display : out std_logic_vector (6 to 0);
+		-- LEDs de saída do circuito.
+		leds : out std_logic_vector (15 downto 0)
 	);
 		
 end Main;
@@ -22,7 +30,7 @@ architecture Behavioral of Main is
 	-- Vetor usado para deslocamento de bits.
 	signal vetor : std_logic_vector (15 downto 0) := "0000000000000010";
 	-- Guarda quantas vezes o valor de 'S' aparece.
-	signal estatistic	: std_logic_vector (3 downto 0) := "0000";
+	signal estatistica	: std_logic_vector (3 downto 0) := "0000";
 	-- Sinal para conectar estatística com display.
 	signal bcd : std_logic_vector (6 to 0);
 	-- Conta quantas vezes o valor de 'S' aparece no vetor.
@@ -37,16 +45,19 @@ begin
 		-- Função GERA e VALIDA implementadas juntas.
 		if (modo = '0') then
 			-- Variável que contém tamanho do grupo.
-			grupo := to_integer(unsigoed(k));
+			grupo := to_integer(unsigned(k));
 			-- Aplica a geração aleatória.
 			vetor(grupo) <= vetor(0) xor vetor(1);
 			-- Da o shift nos bits em borda de subida.
 			if (clk'event and clk = '1' and hab_clk = '1') then			
 				vetor <= std_logic_vector(unsigned(vetor) srl 1);
+			elsif (but_clk'event and but_clk = '1') then
+				vetor <= std_logic_vector(unsigned(vetor) srl 1);
 			end if;
-			-- Se os 4 últimos digitos do vetor foram iguais ao valor de 'S' então conta.
-			if (vetor(0) = s(0) and vetor(1) = s(1) and vetor(2) = s(2) and vetor(3) = s(3)) then
-				conta_s <= conta_s + 1;
+			-- VALIDA
+-- Se os 4 últimos digitos do vetor foram iguais ao valor de 'S' então conta.
+if (vetor(0) = s(0) and vetor(1) = s(1) and vetor(2) = s(2) and vetor(3) = s(3)) then	
+	conta_s <= conta_s + 1;
 			end if;
 		end if;
 	end process;
@@ -93,7 +104,7 @@ begin
 	end process;
 	
 	-- Inverte os valores do display pois é anodo.
-	display <= bcd xor "1111111";
+	display <= not bcd;
 	
 	-- Atribui o valor do vetor deslocado aos LEDs de saida.
 	leds <= vetor;
