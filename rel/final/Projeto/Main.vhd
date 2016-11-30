@@ -92,7 +92,9 @@ begin
 		end if;
 	end process;
 	
+	-- Inverte os valores do display pois é anodo.
 	display <= bcd xor "1111111";
+	
 	-- Atribui o valor do vetor deslocado aos LEDs de saida.
 	leds <= vetor;
 	
