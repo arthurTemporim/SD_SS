@@ -22,7 +22,7 @@ architecture Behavioral of Main is
 	-- Vetor usado para deslocamento de bits.
 	signal vetor : std_logic_vector (15 downto 0) := "0000000000000010";
 	-- Guarda quantas vezes o valor de 'S' aparece.
-	signal estatistica	: std_logic_vector (3 downto 0) := "0000";
+	signal estatistic	: std_logic_vector (3 downto 0) := "0000";
 	-- Sinal para conectar estatística com display.
 	signal bcd : std_logic_vector (6 to 0);
 	-- Conta quantas vezes o valor de 'S' aparece no vetor.
@@ -37,7 +37,7 @@ begin
 		-- Função GERA e VALIDA implementadas juntas.
 		if (modo = '0') then
 			-- Variável que contém tamanho do grupo.
-			grupo := to_integer(unsigned(k));
+			grupo := to_integer(unsigoed(k));
 			-- Aplica a geração aleatória.
 			vetor(grupo) <= vetor(0) xor vetor(1);
 			-- Da o shift nos bits em borda de subida.
