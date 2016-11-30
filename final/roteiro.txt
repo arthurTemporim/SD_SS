@@ -1,0 +1,19 @@
+Introdução
+
+Descrição do funcionamento
+Fazer um fluxograma
+
+Especificação das entradas e saídas utilizadas no kit BASYS3 e o correspondente
+arquivo de restrição(Arquivo xdc)
+
+Código VHDL comentado.
+
+Diagrama esquemático do circuito(Fazer um diagrama no ises)
+
+
+Apresentação dos resultados através de simulações
+
+Metodologia de testes, operação e depuração de erros;
+
+
+Discussões e Conclusão

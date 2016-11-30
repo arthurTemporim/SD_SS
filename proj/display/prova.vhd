@@ -17,7 +17,7 @@ begin
 -- BCD.
 process (entrada)
 begin
-	if 	(entrada = "0000000") then -- 0
+	if (entrada = "0000000") then -- 0
 		bcd <= "1111110";
 	elsif (entrada = "0000001") then -- 1
 		bcd <= "0110000";
