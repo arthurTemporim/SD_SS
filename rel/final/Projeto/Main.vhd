@@ -5,17 +5,23 @@ use ieee.numeric_std.all;
 entity Main is
 
 	port(
-		seletoras : in std_logic_vector(16 downto 0) := "00000000001000000"
+		seletoras : in std_logic_vector(16 downto 0) := "00000000001000000";
+		clk		 : in std_logic 							:= '0'
 	);
 		
 end Main;
 
 architecture Behavioral of Main is
 
-signal t1 : std_logic_vector (16 downto 0);
-
+	signal vetor : std_logic_vector (16 downto 0) := "00000000100000000";
+	
 begin
 		
-		t1 <= std_logic_vector(unsigned(seletoras) sll 1);
-		
+	process (vetor, clk, seletoras)
+	begin
+		if (clk'event and clk = '1') then 
+			vetor <= std_logic_vector(unsigned(vetor) sll 1);
+		end if;
+	end process;
+	
 end Behavioral;
